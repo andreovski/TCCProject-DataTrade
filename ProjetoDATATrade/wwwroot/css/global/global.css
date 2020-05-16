@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: Roboto, 'sans-serif';
+  letter-spacing: 0.5px;
+  background: #E1E1E1;
+  color: #000;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-size: 18px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.input {
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background: none;
+}
+
+.input:focus {
+  background-color: #ffffff;
+}
+
+.button {
+  cursor: pointer;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes btns {
+  from {
+    opacity: 30%;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}

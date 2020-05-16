@@ -1,0 +1,180 @@
+.ms-modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.ms-modal-container.on {
+  display: flex;
+}
+
+.ms-modal {
+  background: #E1E1E1;
+  width: 45%;
+  min-width: 450px;
+  height: auto;
+  position: fixed;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.on .ms-modal {
+  animation: modal .3s;
+}
+
+.ms-header {
+  background: #262626;
+  height: 95px;
+}
+
+.ms-header .ms-wallet {
+  display: flex;
+  position: relative;
+  top: 40px;
+  left: 15px;
+  width: fit-content;
+  background: #363636;
+  padding: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ms-wallet .ms-wallet-icon {
+  width: fit-content;
+  margin: 0 5px 0 0;
+}
+
+.ms-wallet .ms-wallet-icon img{
+  width: 25px;
+}
+
+.ms-wallet .ms-wallet-value {
+  color: white;
+  padding-bottom: 2px;
+}
+
+.ms-close {
+  float: right;
+  width: auto;
+  height: auto;
+  position: relative;
+  right: 20px;
+  top: 45px;
+  background-color: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.ms-close img {
+  width: 25px;
+}
+
+.ms-avatar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  bottom: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.ms-avatar img {
+  width: 120px;
+  border-radius: 60px
+}
+
+.ms-name {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.ms-line {
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ms-line hr {
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, .5);
+  width: 80%;
+}
+
+.ms-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.ms-form input {
+  margin: 12px 5px;
+}
+
+.dropdown {
+  width: 60px;
+}
+
+.input-name {
+  width: 250px;
+}
+
+.input-sec-name {
+  width: 250px;
+}
+
+.input-date-nasc {
+  width: 200px;
+}
+
+.input-email {
+  width: 250px;
+}
+
+.ms-pass {
+  position: relative;
+  top: 24px;
+}
+
+.input-password,
+.input-new-password {
+  width: 220px;
+}
+
+.ms-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px 12px;
+  flex-wrap: wrap
+}
+
+.ms-button  button {
+  font-size: 20px;
+  padding: 6px 25px;
+  background-color: #40416B;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+

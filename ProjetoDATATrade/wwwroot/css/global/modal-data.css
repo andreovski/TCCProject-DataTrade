@@ -1,0 +1,116 @@
+.md-modal-container.on {
+  display: flex; }
+
+.md-modal-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .md-modal-container .md-modal {
+    background: #E1E1E1;
+    width: 60%;
+    min-width: 450px;
+    height: auto;
+    position: fixed;
+    animation: modal .6s;
+    overflow-y: auto; }
+    .md-modal-container .md-modal .md-btn-close {
+      position: relative;
+      float: right;
+      top: 15px;
+      right: 15px;
+      cursor: pointer; }
+      .md-modal-container .md-modal .md-btn-close img {
+        width: 25px; }
+    .md-modal-container .md-modal h2 {
+      margin: 25px;
+      text-align: center; }
+    .md-modal-container .md-modal .md-body {
+      padding: 2% 5%; }
+      .md-modal-container .md-modal .md-body .md-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .md-modal-container .md-modal .md-body .md-form .md-form-left {
+          display: flex;
+          flex-direction: column; }
+          .md-modal-container .md-modal .md-body .md-form .md-form-left .input {
+            max-width: 350px;
+            margin: 15px 0; }
+          .md-modal-container .md-modal .md-body .md-form .md-form-left .md-radio-btn {
+            margin: -3px 0 15px;
+            background: none; }
+            .md-modal-container .md-modal .md-body .md-form .md-form-left .md-radio-btn label {
+              margin-right: 13px; }
+          .md-modal-container .md-modal .md-body .md-form .md-form-left .md-input-flex {
+            display: flex; }
+          .md-modal-container .md-modal .md-body .md-form .md-form-left .md-new-strategy {
+            position: relative;
+            margin-bottom: 5px;
+            margin-left: 3px; }
+            .md-modal-container .md-modal .md-body .md-form .md-form-left .md-new-strategy a {
+              font-size: 11px;
+              letter-spacing: 0.5;
+              color: #40416B;
+              font-weight: 420; }
+        .md-modal-container .md-modal .md-body .md-form .md-image-upload {
+          margin: 10px 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .md-modal-container .md-modal .md-body .md-form .md-image-upload img {
+            width: 250px;
+            cursor: pointer; }
+          .md-modal-container .md-modal .md-body .md-form .md-image-upload #file-input {
+            display: none; }
+          .md-modal-container .md-modal .md-body .md-form .md-image-upload .input {
+            position: relative;
+            margin-top: 42px;
+            margin-left: 6px; }
+          .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            margin-top: 15px;
+            left: 35px; }
+            .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn button {
+              font-size: 18px;
+              padding: 6px 25px;
+              background-color: #40416B;
+              border: none;
+              color: white;
+              border-radius: 5px;
+              cursor: pointer; }
+            .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn button:active {
+              box-shadow: inset 3px 3px 20px -10px rgba(0, 0, 0, 0.8); }
+
+@media (max-width: 1260px) {
+  .md-modal-container .md-modal {
+    width: 80%; }
+    .md-modal-container .md-modal .md-form-left {
+      justify-self: center; }
+    .md-modal-container .md-modal .input {
+      width: 300px; }
+    .md-modal-container .md-modal .md-image-upload .input {
+      top: -10px;
+      margin-bottom: 10px; } }
+
+@media (max-width: 872px) {
+  .md-modal {
+    width: 100vw !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .md-modal-container .md-modal {
+    width: 100vw;
+    height: 100vh;
+    min-width: 0; } }
+
+/*# sourceMappingURL=modal-data.css.map */

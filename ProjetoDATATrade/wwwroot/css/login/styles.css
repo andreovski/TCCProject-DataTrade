@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #E8E8E8;
+}
+
+.back {
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    background: url(svg/back2.png) 0% 0% / cover fixed;
+    background-image: url(svg/back2.png), initial;
+    background-position-x: initial, initial;
+    background-position-y: initial, initial;
+    background-size: cover;
+    background-repeat-x: initial, initial;
+    background-repeat-y: initial, initial;
+    background-attachment: fixed;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+}
+
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-self: center;
+    margin-bottom: 34px;
+}
+
+hr {
+    border: 0;
+    border-top: solid #40416B 4px;
+}
+
+.card {
+    width: 1000px;
+    max-width: 360px;
+    height: 380px;
+    background: #161616;
+    display: grid;
+    justify-content: center;
+    -webkit-box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: -4px 4px 4px 0px rgba(0,0,0,0.25);
+}
+
+.card form {
+    height: max-content;
+    background: none;
+    position: relative;
+    top: 85px;
+}
+
+.card input {
+    display: flex;
+    flex-direction: row;
+    width: 285px;
+    height: 40px;
+    background: none;
+    border: 0;
+    border-bottom: solid #bebebe 1px;
+    margin-bottom: 30px;
+    padding-left: 11px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #D5D5D5;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.card input::placeholder {
+    color: #bebebe;
+}
+
+.card input:focus {
+    border-bottom: solid #40416b 1.3px;
+}
+
+:focus{outline: none;}
+
+.btnLogin {
+    display: flex;
+    position: relative;
+    top: 43px;
+    height: 35px;
+    width: 166px;
+    justify-self: center;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #40416b;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btnLogin:hover, .btnLogin:focus {
+    opacity: 80%;
+}    
+
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+}
+
+.options a{
+    color: #c4c4c4;
+    text-decoration: unset;
+    position: relative;
+    bottom: 13px;
+    transition: all 0.3s;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.options a:hover{
+    color: #40416B;
+}
+
+.options #Forgot {
+    justify-self: start;
+    position: relative;
+    right: 20px;
+}
+
+.options #Register {
+    justify-self: end;
+    position: relative;
+    left: 20px;
+}

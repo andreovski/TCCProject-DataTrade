@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin: 2%;
+  padding: 40px 20px; 
+  overflow-x: auto ;}
+  .container .card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    max-width: 950px;
+    min-width: 750px;
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    .container .card .header {
+      display: flex;
+      background: #262626;
+      width: 100%;
+      padding: 8px 10px;
+      color: #fff;
+      align-items: center; }
+      .container .card .header h2 {
+        font-weight: 450;
+        font-size: 24px; }
+      .container .card .header p {
+        font-weight: 400;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: 10px;
+        padding-right: 30px;
+        background: url("../../images/icons/arrow.svg") no-repeat right center; }
+    .container .card .body {
+      display: grid;
+      grid-template-rows: 150px 1fr 200px;
+      width: 95%;
+      max-width: 950px;
+      align-items: center; }
+      .container .card .body .main-informations {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 180px));
+        height: 90px;
+        align-content: center;
+        justify-content: space-evenly;
+        background: #E1E1E1;
+        border-radius: 8px 8px 0 0; }
+        .container .card .body .main-informations .m-info {
+          text-align: center;
+          font-weight: 450; }
+          .container .card .body .main-informations .m-info .title {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.7); }
+          .container .card .body .main-informations .m-info .info-data {
+            margin-top: 10px;
+            font-size: 18px; }
+      .container .card .body .table {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .container .card .body .table .main-table {
+          width: 100%;
+          max-width: 950px; }
+          .container .card .body .table .main-table .tg {
+            border: #000 solid 1px;
+            width: 100%;
+            border-spacing: 0; }
+            .container .card .body .table .main-table .tg .tg-60hs {
+              padding: 10px 8px;
+              font-size: 16px;
+              width: 12.5%; }
+            .container .card .body .table .main-table .tg .tg-rg0h {
+              text-align: center;
+              color: rgba(0, 0, 0, 0.5);
+              font-weight: 500;
+              padding: 5px 0 10px 0; }
+            .container .card .body .table .main-table .tg .tg-0lax {
+              height: 30px;
+              border-top: #000 solid 1px;
+              text-align: center;
+              background: #E1E1E1; }
+        .container .card .body .table .sub-table {
+          width: 100%;
+          max-width: 950px; }
+          .container .card .body .table .sub-table .tg {
+            border: #000 solid 1px;
+            width: 100%;
+            border-spacing: 0;
+            text-align: center; }
+            .container .card .body .table .sub-table .tg .tg-0lax {
+              width: 12.5%; }
+      .container .card .body .sub-informations {
+        display: flex;
+        align-items: center; }
+        .container .card .body .sub-informations .tm {
+          border: #000 solid 1px;
+          width: 500px;
+          border-spacing: 0;
+          text-align: center; }
+          .container .card .body .sub-informations .tm .tg-60hs {
+            width: 20%;
+            height: 30px; }
+          .container .card .body .sub-informations .tm .tg-0lax {
+            width: 20%;
+            border-top: #000 solid 1px;
+            height: 25px; }
+      .container .card .body .graphic-img {
+        display: flex;
+        width: 90%;
+        justify-content: center; }
+        .container .card .body .graphic-img img {
+          width: 160px; }
+
+@media (max-width: 790px) {
+  .container {
+    padding: 40px 0;
+    margin: 0; } }
+
+@media (max-width: 755px) {
+  .container {
+    align-items: unset;
+ } 
+}
+
+/*# sourceMappingURL=body.css.map */

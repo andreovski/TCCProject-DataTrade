@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  margin: 2%;
+  padding: 40px 20px; }
+  .container .card-container {
+    width: auto;
+    min-width: 300px; }
+    .container .card-container .header {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background: #262626;
+      display: flex;
+      width: 100%; }
+      .container .card-container .header h2 {
+        font-weight: 450;
+        color: #fff;
+        margin: 6px; }
+      .container .card-container .header .filter {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        color: #fff;
+        align-items: center; }
+        .container .card-container .header .filter p {
+          font-size: 18px;
+          margin: 0px 20px;
+          padding-right: 30px;
+          background: url("../../images/icons/arrow.svg") no-repeat right center; }
+    .container .card-container .card {
+      margin-top: 25px;
+      background: #fff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+      .container .card-container .card .card-header {
+        color: #fff;
+        background: #262626;
+        padding: 5px; }
+        .container .card-container .card .card-header p {
+          margin-left: 5px; }
+      .container .card-container .card .card-body {
+        display: flex;
+        flex-wrap: wrap-reverse; }
+        .container .card-container .card .card-body .day-graphic-img {
+          display: flex;
+          margin: 20px; }
+          .container .card-container .card .card-body .day-graphic-img img {
+            width: 280px; }
+        .container .card-container .card .card-body .main-table {
+          display: flex;
+          flex-wrap: wrap; }
+          .container .card-container .card .card-body .main-table :first-child {
+            margin-right: 10px; }
+          .container .card-container .card .card-body .main-table .iTable {
+            display: flex;
+            width: auto;
+            margin: 15px 0; }
+            .container .card-container .card .card-body .main-table .iTable tr {
+              width: 246px;
+              padding: 4px;
+              display: flex;
+              align-items: center;
+              border-bottom: #000 1px solid; }
+              .container .card-container .card .card-body .main-table .iTable tr :first-child {
+                color: rgba(0, 0, 0, 0.7);
+                font-weight: 450;
+                text-align: initial; }
+              .container .card-container .card .card-body .main-table .iTable tr :last-child {
+                text-align: end;
+                font-weight: 450; }
+              .container .card-container .card .card-body .main-table .iTable tr th {
+                width: 100px; }
+
+@media (max-width: 1038px) {
+  .card-container {
+    width: 75% !important; }
+    .card-container .day-graphic-img {
+      width: 100%;
+      justify-content: center; }
+    .card-container .main-table {
+      width: 100%;
+      justify-content: center;
+      margin: 2% 3%; } }
+@media (max-width: 752px) {
+  .container {
+    padding: 40px 0px !important;
+    margin: 0 !important; } }
+
+/*# sourceMappingURL=body.css.map */

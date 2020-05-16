@@ -1,0 +1,207 @@
+.container {
+  padding: 5%;
+  margin: 0 8%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.pre-trade-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 1px 0;
+}
+
+.card {
+  padding: 15px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin: 5px 15px 5px 5px;
+  max-width: 570px;
+}
+
+.subtitle {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin: 7px 0;
+}
+
+.line {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.list {
+  list-style: circle;
+  margin: 3%;
+}
+
+.list li {
+  margin: 10px 2%;
+}
+
+.questions {
+  padding-top: 5%;
+}
+
+.list-sec li {
+  padding: 10px;
+  background: rgba(64, 65, 107, 0.5);
+  border-radius: 5px;
+}
+
+.text-focus {
+  margin: 22px 0 10px;
+}
+
+/* Segundo card */
+
+.perfil-trade-section {
+}
+
+.perfil-trade-section .title{
+  float: right;
+  margin-right: 10px;
+}
+
+.perfil-trade-section .card {
+  float: right;
+  width: 80%;
+}
+
+.preferences ul{
+  list-style: none;
+}
+
+.row {
+  display: flex;
+}
+
+.row .left-info {
+  width: 60%;
+}
+
+.row .right-info {
+  width: 40%;
+  font-weight: 500;
+  text-align: end;
+}
+
+.b-main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.b-main-info .ativo{
+  margin: 7px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.ativo p:nth-of-type(1) {
+  width: 40%;
+}
+
+.b-main-info .i-name {
+  width: 60%;
+  font-weight: 500;
+  text-align: end;
+}
+
+.b-main-info .indicadores{
+  margin: 7px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.indicadores p:nth-of-type(1) {
+  width: 40%;
+}
+
+.b-main-info .candles {
+  margin: 7px 0;
+  width: 100%;
+}
+
+.candles-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.candles-img img {
+  width: 100px;
+  margin: 15px 2px 0;
+}
+
+/* Newsletters */
+
+.newsletters.container {
+  padding: 0%;
+}
+
+.news.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  max-width: 100%;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.news-img {
+  margin: 5px;
+}
+
+.news-img img {
+  width: 100%;
+  max-width: 170px;
+  border-radius: 3px;
+}
+
+.news-info {
+  width: 80%;
+  margin: 0 12px;
+}
+
+.news-info .news-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.text-info-news p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.font-news  {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 960px) {
+  .perfil-trade-section .title{
+    float: none;
+    margin: 25px 0 0 0;
+  }
+  
+  .perfil-trade-section .card {
+    float: none;
+    width: auto;
+  }
+}
+
+@media (max-width: 496px) {
+  .news-container {
+    margin-top: 15px;
+  }
+}
+

@@ -1,0 +1,110 @@
+/* Button add */
+
+.add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.add-options-btn {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+@keyframes btns {
+  from {
+    opacity: 30%;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.b-on .button.fir-btn {
+  animation: btns .3s;
+  animation-delay: 10ms;
+  animation-fill-mode: backwards;
+}
+
+.b-on .button.sec-btn {
+  animation: btns .3s;
+  animation-delay: 70ms;
+  animation-fill-mode: backwards;
+}
+
+.add-options-btn.b-on {
+  display: flex;
+}
+
+.add-options-btn button {
+  display: block;
+}
+
+.button.fir-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+}
+
+.button.sec-btn {
+  position: fixed;
+  bottom: 140px;
+  right: 20px;
+}
+
+.add-btn button {
+  width: 50px;
+  height: 50px;
+  background: #40416b;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 30px;
+  transition: .2s;
+  cursor: pointer;
+}
+:focus{outline: none;}
+
+/* .add-btn #add-btn-show:hover {
+  transform: rotate(180deg);
+  background: rgba(65, 66, 108, .9);
+}  */
+
+.text-effect {
+  color: #fff;
+  width: 0px;
+  transition: .5s;
+  overflow: hidden;
+  white-space: pre-wrap;
+  transition: .3s;
+  font-weight: 400;
+}
+
+.hover1 .text-effect {
+  position: absolute;
+  bottom: 160px;
+  right: 90px;
+}
+
+.hover1:hover .text-effect {
+  width: 80px;
+}
+
+.hover2 .text-effect {
+  position: absolute;
+  bottom: 98px;
+  right: 90px;
+}
+
+.hover2:hover .text-effect {
+  width: 50px;
+}
+
+

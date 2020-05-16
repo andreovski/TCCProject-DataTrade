@@ -1,0 +1,35 @@
+﻿@model ProjetoDATATrade.Models.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/login/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="back">
+        <div class="container">
+            <div class="logo">
+                <img src="~/css/login/svg/Logo.svg" alt="DATA-Core">
+            </div>
+            <hr>
+            <div class="card">
+                <form>
+                    <input type="text" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                </form>
+                <button type="submit" class="btnLogin">Login</button>
+                <div class="options">
+                    <a href="#" id="Forgot">Esqueci a senha!</a>
+                    <a href="#" id="Register">Registrar-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
