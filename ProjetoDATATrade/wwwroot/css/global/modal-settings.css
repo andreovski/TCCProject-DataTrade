@@ -19,9 +19,9 @@
 
 .ms-modal {
   background: #E1E1E1;
-  width: 45%;
-  min-width: 450px;
-  height: 100vh;
+  width: 60%;
+  min-width: 430px;
+  height: 65%;
   position: fixed;
   overflow-y: auto;
 }
@@ -114,12 +114,14 @@
 
 .ms-form {
   display: flex;
+  text-align: center;
   flex-wrap: wrap;
-  margin-left: 5%;
   margin-top: 2%;
+  padding: 0 25px; 
 }
 
 .ms-form input {
+  width: ;
   margin: 12px 5px;
 }
 
@@ -157,8 +159,8 @@
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  margin: 10px 12px;
-  flex-wrap: wrap
+  margin: 20px 0 5px 0;
+  justify-content: center;
 }
 
 .ms-button  button {
@@ -168,4 +170,60 @@
   border: none;
   color: white;
   border-radius: 5px;
+}
+
+@media (max-width: 950px) {
+  .ms-modal {
+    width: 80%;
+    height: 90%;
+  }
+
+  .ms-form {
+    margin: 15px 0;
+    padding: 0 20px; 
+  }
+
+  input {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .ms-modal {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ms-form {
+    display: flex;
+    place-content: center;
+    height: 570px;
+    margin: 0 !important;
+  }
+
+  .ms-first-settings {
+    width: 100%;
+  }
+
+  input {
+    display: flex;
+    margin: 0 0 0 0 !important ;
+    height: 45px !important;
+    width: 100% !important;
+  }
+
+  input:not(.input-name) {
+    margin: 20px 0 0 0 !important ;
+  }
+
+  .ms-button {
+    display: block;
+    text-align: center;
+  }
+
+  button {
+    width: 249px;
+    height: 45px;
+    margin-top: 15px;
+  }
 }
