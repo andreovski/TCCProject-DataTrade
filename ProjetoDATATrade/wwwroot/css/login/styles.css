@@ -64,6 +64,7 @@ hr {
     background: none;
     position: relative;
     top: 85px;
+    text-align: center;
 }
 
 .card input {
@@ -73,7 +74,7 @@ hr {
     height: 40px;
     background: none;
     border: 0;
-    border-bottom: solid #bebebe 1px;
+    border-bottom: solid #bebebe 1.3px;
     margin-bottom: 30px;
     padding-left: 11px;
     font-size: 18px;
@@ -94,19 +95,13 @@ hr {
 :focus{outline: none;}
 
 .btnLogin {
-    display: flex;
-    position: relative;
-    top: 43px;
     height: 35px;
     width: 166px;
-    justify-self: center;
     border-radius: 30px;
     border: none;
     font-size: 18px;
     color: #fff;
     background: #40416b;
-    justify-content: center;
-    align-items: center;
     font-size: 18px;
     letter-spacing: 1.6px;
     cursor: pointer;
@@ -150,3 +145,19 @@ hr {
     position: relative;
     left: 20px;
 }
+
+.inputError {
+    border-color: red !important;
+}
+.inputValid {
+    border-color: #40416B !important;
+}
+
+span.error.active {
+    position: relative;
+    bottom: 20px;
+    text-align: start;
+    color: rgba(194, 26, 26, 0.50)
+}
+
+

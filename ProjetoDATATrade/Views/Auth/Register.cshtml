@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="~/css/register/styles.css">
     <title>Document</title>
+    <script src="~/js/validationRegisterForm.js" defer></script>
 </head>
 <body>
     <div class="back">
@@ -20,20 +21,35 @@
             <div class="card">
                 <h1 class="text-h1">Criar uma conta</h1>
                 <form name="dados">
-                    <input type="text" id="name" placeholder="Nome">
-                    <input type="text" id="name" placeholder="Sobrenome">
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Senha">
-                    <input type="password" placeholder="Confirmar e-mail">
+                    <div>
+                        <input required type="text" id="name" placeholder="Nome">
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <input required type="email" placeholder="E-mail">
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <input required type="password" placeholder="Senha" name="password">
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <input required type="password" placeholder="Confirmar e-mail" name="rep_password">
+                        <span class="error" id="confirmation"></span>
+                    </div>
+
                     <div class="center">
-                        <input type="checkbox" id="checkbox">
+                        <input required type="checkbox" id="checkbox">
                         <p>Declaro de li e concordei com os "<a href="#" id="termos"> TERMOS DE USO</a>"</p>
+                        <span class="error"></span>
+                    </div>
+                    <div class="bottom">
+                        <div class="arrow">
+                            <a href="#"><img src="~/css/register/svg/arrow.svg" alt="Voltar"></a>
+                        </div>
+                        <button type="submit" class="btnReg" >Registrar-se</button>
                     </div>
                 </form>
-                <div class="arrow">
-                    <a href="#"><img src="~/css/register/svg/arrow.svg" alt="Voltar"></a>
-                </div>
-                <button type="submit" class="btnReg">Registrar-se</button>
             </div>
         </div>
     </div>

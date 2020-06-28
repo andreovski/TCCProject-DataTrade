@@ -1,16 +1,19 @@
 ﻿@model ProjetoDATATrade.Models.Login
 
 @{
-    Layout = null;
+Layout = null;
 }
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="~/css/login/styles.css">
+    <link rel="stylesheet" href="~/wwwroot/css/login/styles.css">
     <title>Login</title>
+    <script src="~/wwwroot/js/validationLoginForm.js" defer></script>
 </head>
+
 <body>
     <div class="back">
         <div class="container">
@@ -20,10 +23,17 @@
             <hr>
             <div class="card">
                 <form>
-                    <input type="text" placeholder="E-mail">
-                    <input type="password" placeholder="Senha">
+                    <div>
+                        <input required type="email" placeholder="E-mail">
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <input required type="password" placeholder="Senha">
+                        <span class="error"></span>
+                    </div>
+
+                    <button type="submit" class="btnLogin">Login</button>
                 </form>
-                <button type="submit" class="btnLogin">Login</button>
                 <div class="options">
                     <a href="#" id="Forgot">Esqueci a senha!</a>
                     <a href="#" id="Register">Registrar-se</a>
@@ -32,4 +42,5 @@
         </div>
     </div>
 </body>
+
 </html>

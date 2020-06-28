@@ -52,7 +52,8 @@ hr {
 .card {
     width: 1000px;
     max-width: 450px;
-    height: 625px;
+    height: auto;
+    margin-bottom: 20px;
     background: #161616;
     display: grid;
     justify-content: center;
@@ -70,18 +71,13 @@ hr {
     justify-content: center;
 }
 
-.card form {
-    position: relative;
-    top: 1em;
-}
-
 .card input {
     display: flex;
     width: 381px;
     height: 40px;
     background: none;
     border: 0;
-    margin: 40px 14px 0 14px;
+    margin: 40px 14px 10px 14px !important;
     border-bottom: solid #bebebe 1px;
     padding-left: 11px;
     font-size: 18px;
@@ -94,12 +90,6 @@ hr {
 
 .card input:focus {
     border-bottom: solid #40416b 1.5px;
-}
-
-#name {
-    margin-top: 0;
-    display: inline-flex;
-    width: 174px;
 }
 
 #checkbox {
@@ -121,6 +111,7 @@ form p {
     position: relative;
     top: 54px;
     justify-self: center;
+    height: 5px;
 }
 
 :focus{outline: none;}
@@ -132,12 +123,17 @@ form p {
     font-weight: bold;
 }
 
+.bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 20px 20px;
+    justify-content: space-between;
+}
+
 .btnReg {
     display: flex;
-    position: relative;
     height: 36px;
     width: 166px;
-    justify-self: center;
     border-radius: 30px;
     border: none;
     font-size: 18px;
@@ -148,7 +144,7 @@ form p {
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s;
-    bottom: 36px;
+    text-align: center;
 }
 
 .btnReg:hover, .btnReg:focus {
@@ -158,10 +154,23 @@ form p {
 .arrow{
     width: 14px;
     height: 24px;
-    position: relative;
-    top: 1.7em;
-    left: 1em;
     cursor: pointer;
+    margin-top: 6px;
 }
 
+.inputValid {
+    border-color: #40416B !important;
+}
+
+.inputError {
+    border-color: red !important
+}
+
+span.error.active {
+    position: relative;
+    text-align: start;
+    padding-left: 18px;
+    padding-top: 5px;
+    color: rgba(194, 26, 26, 0.50)
+}
 
