@@ -17,6 +17,7 @@ function validateField(field) {
 
   function customMessage(typeError) {
     const defaultMessage = "Campo obrigatório";
+    
     const messages = {
       text: {
         valueMissing: defaultMessage,

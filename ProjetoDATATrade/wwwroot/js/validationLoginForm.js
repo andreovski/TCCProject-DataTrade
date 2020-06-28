@@ -31,7 +31,7 @@ function validateField(field) {
 
 
   function setCustomMessage(message) {
-    const spanError = field.parentNode.querySelector("span.error")
+    const spanError = field.parentNode.querySelector("span.error");
 
     if (message) {
       spanError.classList.add("active");
