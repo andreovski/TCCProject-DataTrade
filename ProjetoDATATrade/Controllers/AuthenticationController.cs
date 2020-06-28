@@ -22,7 +22,7 @@ namespace ProjetoDATATrade.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login([FromForm] Login login ) 
+        public IActionResult Login([FromForm] Usuario usuario ) 
         {
             return View();
         }

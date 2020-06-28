@@ -10,8 +10,10 @@ namespace ProjetoDATATrade.Models
 {
     public class Carteira
     {
+      
+       [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
         [Key]
-        [ForeignKey("UsuarioID")]
         public int CarteiraID { get; set; }
         public float Saldo { get; set; }
         [Display(Name = "Tempo de Investimento")]

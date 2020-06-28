@@ -9,8 +9,10 @@ namespace ProjetoDATATrade.Models
 {
     public class Estrategia
     {
-        [Key]
         [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
+        [Key]
+       // [ForeignKey("UsuarioID")]
         public int EstrategiaID { get; set; }
 
         [Required]
@@ -34,6 +36,7 @@ namespace ProjetoDATATrade.Models
         public string Quando { get; set; }
 
         public virtual Usuario Usuario { get; set; }
-        public virtual Trader Trader { get; set; }
+
+        //public virtual Trader Trader { get; set; }
     }
 }

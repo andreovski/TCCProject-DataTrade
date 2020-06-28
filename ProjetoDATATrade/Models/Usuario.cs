@@ -19,15 +19,19 @@ namespace ProjetoDATATrade.Models
         [Required]
         public string Email { get; set; }
 
-        [Required]  
-        public string CPF { get; set; }
+     //   public virtual Trader Trader { get; set; }
+      //  public virtual Carteira Carteira { get; set; }       
 
+<<<<<<< HEAD
+=======
         [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:yyyy-mm-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Data de Nascimento")]
         public DateTime Nascimento { get; set; }
 
-        public virtual Carteira Carteira { get; set; }
-        public virtual Login Login { get; set; }
+     //   public virtual Trader Trader { get; set; }
+      //  public virtual Carteira Carteira { get; set; }       
+
+>>>>>>> d8bc49ce96955ede431312d62bec8b5735d452cc
         public virtual ICollection<Estrategia> Estrategias { get; set; }
         public virtual ICollection<Operacao> Operacoes { get; set; }
       

@@ -28,7 +28,7 @@ namespace ProjetoDATATrade.Controllers
             return View();
         }
 
-        public IActionResult Verificacao(Login logar)
+        public IActionResult Verificacao(Usuario usuario)
         {
             return View();
         }

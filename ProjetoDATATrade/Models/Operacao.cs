@@ -9,8 +9,10 @@ namespace ProjetoDATATrade.Models
 {
     public class Operacao
     {
-        [Key]
+     
         [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
+        [Key]
         public int OperacaoID { get; set; }
 
         [Required]

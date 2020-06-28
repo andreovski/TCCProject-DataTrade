@@ -8717,11 +8717,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+      "projectUniqueName": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
       "projectName": "ProjetoDATATrade",
-      "projectPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+      "projectPath": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
       "packagesPath": "C:\\Users\\André\\.nuget\\packages\\",
-      "outputPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\obj\\",
+      "outputPath": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\André\\AppData\\Roaming\\NuGet\\NuGet.Config",

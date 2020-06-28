@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 
 namespace ProjetoDATATrade.Models
 {
     public class Trader
     {
-        [Key]
+    
+
         [ForeignKey("EstrategiaID")]
+        public int UsuarioID { get; set; }
+
+        [Key]
         public int TraderID { get; set; }
 
         [Required]
@@ -54,6 +59,9 @@ namespace ProjetoDATATrade.Models
         [Display(Name = "Principais Candles")]
         public string PrincipaisCandle { get; set; }
 
-        public virtual Estrategia Estrategia { get; set; }
+        public virtual Usuario Usuario { get; set; }
+
+
+      //  public virtual Estrategia Estrategia { get; set; }
     }
 }
