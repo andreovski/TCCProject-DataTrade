@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CFx24DolbHYNLpt7x+cppUGFUrr0ZJdmx271IOElhTVPw+mc7C8LJRbr/eibTIBX+2LEGiFVHC45L+09+8TrJw==",
+  "dgSpecHash": "c8OYAoqF7tCRjF1F0WB1lFaHw3LWNxaw8spd4Xdcd2Sf8NQXvZ/Vg56wrfHubA4GgzXeLvjCCy3DiZod0C8Y9A==",
   "success": true,
-  "projectFilePath": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+  "projectFilePath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\André\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\André\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

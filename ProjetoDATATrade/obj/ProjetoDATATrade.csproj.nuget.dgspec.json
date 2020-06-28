@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {}
+    "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {}
   },
   "projects": {
-    "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {
+    "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+        "projectUniqueName": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
         "projectName": "ProjetoDATATrade",
-        "projectPath": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+        "projectPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
         "packagesPath": "C:\\Users\\André\\.nuget\\packages\\",
-        "outputPath": "A:\\Documentos\\TCCProject-DataTrade-master\\ProjetoDATATrade\\obj\\",
+        "outputPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\André\\AppData\\Roaming\\NuGet\\NuGet.Config",
