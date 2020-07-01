@@ -28,9 +28,11 @@ function validateField(field) {
       },
       password: {
         valueMissing: defaultMessage,
+        tooShort: "Sua senha deve ter no mínimo 6 caracteres",
+
       },
       checkbox: {
-        valueMissing: "",
+        valueMissing: "Confirme o termo de uso.",
       }
     };
 
@@ -53,15 +55,20 @@ function validateField(field) {
   return function() {
     const error = verifyErrors();
 
-
-    console.log(error);
-
     if (error) {
       const message = customMessage(error);
       
       field.classList.add("inputError");
       setCustomMessage(message);
     } else {
+      const passwordInput = document.querySelector('#password');
+
+      if (field === passwordInput ) {
+        passwordValidation(passwordInput, passwordInput.value);
+
+        return;
+      }
+
       field.classList.remove("inputError");
       field.classList.add("inputValid");
       setCustomMessage();
@@ -76,6 +83,39 @@ function customValidation(event) {
 
   validation();
 }
+
+function passwordValidation(input, value) {
+  const spanError = input.parentNode.querySelector("span.error")
+
+  let regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%*()_+^&}{:;?.])(?:([0-9a-zA-Z!@#$%;*(){}_+^&])(?!\1)){6,}$/;
+
+  if (!regex.test(value)) {
+    console.log(value, '= inválida');
+
+    input.classList.add("inputError");
+
+    spanError.classList.add("active");
+    spanError.innerHTML = 
+      "<ul><b>A senha precisa conter ao menos:</b>" + 
+      "<li>Um caracter maiusculo</li>" +
+      "<li>Um caracter especial</li>" +
+      "<li>Um número</li>" +
+      "</ul>";
+
+    return;
+  } else {
+    console.log(value, '= Válida');
+
+    input.classList.remove("inputError");
+    input.classList.add("inputValid");
+
+    spanError.classList.add("active");
+    spanError.innerHTML = "";
+
+    return;
+  }
+};
+
 
 for (field of fields) {
   field.addEventListener("invalid", event => {

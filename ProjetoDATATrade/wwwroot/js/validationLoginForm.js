@@ -73,6 +73,8 @@ function customValidation(event) {
   validation();
 }
 
+const btnSubmit = document.querySelector('.btnLogin');
+
 for (field of fields) {
   field.addEventListener("invalid", event => {
     // eliminar bubble
@@ -81,6 +83,6 @@ for (field of fields) {
     customValidation(event);
   });
 
-  field.addEventListener("blur", customValidation);
+  btnSubmit.addEventListener("click", customValidation);
 }
 
