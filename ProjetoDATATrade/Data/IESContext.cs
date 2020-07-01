@@ -12,16 +12,15 @@ namespace ProjetoDATATrade.Data
         public IESContext(DbContextOptions<IESContext> options) : base(options)
         {
         }
+        public DbSet<Carteira> Carteiras { get; set; }
+        public DbSet<Estrategia> Estrategias { get; set; }
+        public DbSet<Indicador> Indicadores { get; set; }
+        public DbSet<Login> Logins { get; set; }
+        public DbSet<Operacao> Operacoes { get; set; }
+        public DbSet<PerfilTrader> perfilTraders { get; set; }
+        public DbSet<Trader> Traders { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
-        public DbSet<Carteira> Carteiras { get; set; }
-
-        public DbSet<Estrategia> Estrategias { get; set; }
-
-        public DbSet<Operacao> Operacoes { get; set; }
-
-        public DbSet<Trader> Traders { get; set; }
-        
 
         //protected override void OnModelCreating(ModelBuilder builder)
         //{

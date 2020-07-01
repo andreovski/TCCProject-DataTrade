@@ -16,10 +16,6 @@ namespace ProjetoDATATrade.Models
         [Key]
         public int CarteiraID { get; set; }
         public float Saldo { get; set; }
-        [Display(Name = "Tempo de Investimento")]
-        public DateTime TempoInvestimento { get; set; }
-        [Display(Name = "Investimento Mensal")]
-        public float InvestimentoMensal { get; set; }
         [Display(Name = "Total Acumalado")]
         public float TotalAcumulado { get; set; }
         public float Lucro { get; set; }

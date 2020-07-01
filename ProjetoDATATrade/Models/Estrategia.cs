@@ -37,6 +37,5 @@ namespace ProjetoDATATrade.Models
 
         public virtual Usuario Usuario { get; set; }
 
-        //public virtual Trader Trader { get; set; }
     }
 }
