@@ -12,6 +12,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjetoDATATrade.Data;
+using ProjetoDATATrade.Libs.Sessao;
+using ProjetoDATATrade.Libs.LoginLibs;
+using ProjetoDATATrade.Repositories;
+using ProjetoDATATrade.Repositories.Interfaces;
 
 namespace ProjetoDATATrade
 {
@@ -27,8 +31,25 @@ namespace ProjetoDATATrade
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Services das repository e interfaces
+            services.AddHttpContextAccessor();
+            services.AddScoped<ICarteiraRep, CarteiraRep>();
+            services.AddScoped<IEstrategiaRep, EstrategiaRep>();
+            services.AddScoped<ILoginRep, LoginRep>();
+            services.AddScoped<IOperacaoRep, OperacaoRep>();
+            services.AddScoped<ITraderRep, TraderRep>();
+            services.AddScoped<IUsuarioRep, UsuarioRep>();
+            //services do banco de dados
             services.AddDbContext<IESContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnectionString")));
             services.AddControllersWithViews();
+            //Services da Sessao
+            services.AddMemoryCache();
+            services.AddSession(options =>
+            {
+
+            });
+            services.AddScoped<Sessao>();
+            services.AddScoped<LoginUsuario>();
 
             services.AddMvc();
         }
@@ -47,7 +68,9 @@ namespace ProjetoDATATrade
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
@@ -57,7 +80,7 @@ namespace ProjetoDATATrade
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Login}/{id?}");
+                    pattern: "{controller=Auth}/{action=Login}/{id?}");
             });
         }
     }

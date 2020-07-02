@@ -12,7 +12,6 @@ namespace ProjetoDATATrade.Models
         [ForeignKey("UsuarioID")]
         public int UsuarioID { get; set; }
         [Key]
-       // [ForeignKey("UsuarioID")]
         public int EstrategiaID { get; set; }
 
         [Required]
@@ -36,6 +35,7 @@ namespace ProjetoDATATrade.Models
         public string Quando { get; set; }
 
         public virtual Usuario Usuario { get; set; }
+        public ICollection<Operacao>Operacoes { get; set; }
 
     }
 }

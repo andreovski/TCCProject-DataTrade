@@ -16,13 +16,13 @@ namespace ProjetoDATATrade.Repositories
         {
             _dbContext = dbContext;
         }
-        public void AlterarCadastro(Usuario usuario)
+        public void AlterarCadastro(Login usuario)
         {
             _dbContext.Update(usuario);
             _dbContext.SaveChanges();
         }
 
-        public void Cadastrar(Usuario usuario)
+        public void Cadastrar(Login usuario)
         {
             _dbContext.Add(usuario);
             _dbContext.SaveChanges();
@@ -30,16 +30,16 @@ namespace ProjetoDATATrade.Repositories
 
         public void ExcluirCadastro(int id)
         {
-            Usuario usuario = ObterUsuarios(id);
+            Login usuario = ObterUsuarios(id);
             _dbContext.Remove(usuario);
             _dbContext.SaveChanges();
         }
-        public Usuario ObterUsuarios(int id)
+        public Login ObterUsuarios(int id)
         {
             return _dbContext.Usuarios.Find(id);
         }
 
-        public void ValidarEmail(Usuario usuario)
+        public void ValidarEmail(Login usuario)
         {
             
         }

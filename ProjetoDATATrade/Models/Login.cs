@@ -11,10 +11,11 @@ namespace ProjetoDATATrade.Models
     {
         
         [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
         [Key]
         public int LoginID { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string EmailLogin { get; set; }
         [Required]
         public string Senha { get; set; }
 

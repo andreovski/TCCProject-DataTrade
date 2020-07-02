@@ -8,9 +8,9 @@ namespace ProjetoDATATrade.Repositories.Interfaces
 {
     public interface IUsuarioRep
     {
-        void Cadastrar(Usuario usuario);
-        void AlterarCadastro(Usuario usuario);
+        void Cadastrar(Login usuario);
+        void AlterarCadastro(Login usuario);
         void ExcluirCadastro(int id);
-        void ValidarEmail(Usuario usuario);
+        void ValidarEmail(Login usuario);
     }
 }

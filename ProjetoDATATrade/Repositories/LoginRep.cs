@@ -18,7 +18,7 @@ namespace ProjetoDATATrade.Repositories
         }
         public Login Login(string Email, string Senha)
         {
-            Login login = _dbContext.Logins.Where(l => l.Email == Email && l.Senha == Senha).First();
+            Login login = _dbContext.Logins.Where(l => l.EmailLogin == Email && l.Senha == Senha).First();
             return login;
         }
     }

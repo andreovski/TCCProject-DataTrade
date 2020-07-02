@@ -22,13 +22,17 @@ Layout = null;
             </div>
             <hr>
             <div class="card">
-                <form>
+                @if( (ViewData["MSG_E"] != null))
+                {
+                    <span class="alert">@ViewData["MSG_E"]</span>
+                }
+                <form method="post" asp-action="Login" asp-controller="Auth">
                     <div>
-                        <input required type="email" placeholder="E-mail">
+                        <input required type="email" placeholder="E-mail" asp-for="EmailLogin">
                         <span class="error"></span>
                     </div>
                     <div>
-                        <input required type="password" placeholder="Senha">
+                        <input required type="password" placeholder="Senha" asp-for="Senha">
                         <span class="error"></span>
                     </div>
 

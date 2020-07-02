@@ -9,12 +9,11 @@ namespace ProjetoDATATrade.Models
 {
     public class Indicador
     {
-        [ForeignKey("UsuarioID")]
         [Key]
         public int InidicadorID { get; set; }
         [Required]
         public string Titulo { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        public virtual Trader Trader { get; set; }
 
     }
 }

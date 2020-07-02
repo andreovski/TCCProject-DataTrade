@@ -1,4 +1,7 @@
-﻿@{
+﻿@model ProjetoDATATrade.Models.Usuario
+@model ProjetoDATATrade.Models.Login
+
+@{
     Layout = null;
 }
 
@@ -20,17 +23,17 @@
             <hr>
             <div class="card">
                 <h1 class="text-h1">Criar uma conta</h1>
-                <form name="dados">
+                <form name="dados" asp-action="Registro" asp-controller="Auth" method="post">
                     <div>
-                        <input required type="text" id="name" placeholder="Nome">
+                        <input required type="text" id="name" placeholder="Nome" asp-for="NomeCompleto">
                         <span class="error"></span>
                     </div>
                     <div>
-                        <input required type="email" placeholder="E-mail">
+                        <input required type="email" placeholder="E-mail" asp-for="EmailUsuario">
                         <span class="error"></span>
                     </div>
                     <div>
-                        <input required type="password" placeholder="Senha" id="password" minlength="6">
+                        <input required type="password" placeholder="Senha" id="password" minlength="6" @*asp-for="Senha"*@>
                         <span class="error"></span>
                     </div>
 
@@ -43,7 +46,7 @@
                         <div class="arrow">
                             <a href="#"><img src="~/css/register/svg/arrow.svg" alt="Voltar"></a>
                         </div>
-                        <button type="submit" class="btnReg" >Registrar-se</button>
+                        <button type="submit" class="btnReg">Registrar-se</button>
                     </div>
                 </form>
             </div>

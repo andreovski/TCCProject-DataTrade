@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoDATATrade.Data;
 
 namespace ProjetoDATATrade.Data
 {
     [DbContext(typeof(IESContext))]
-    partial class IESContextModelSnapshot : ModelSnapshot
+    [Migration("20200701233100_updatebase1")]
+    partial class updatebase1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -346,7 +348,7 @@ namespace ProjetoDATATrade.Data
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjetoDATATrade.Models.Usuario", null)
+                    b.HasOne("ProjetoDATATrade.Models.Usuario", "Usuario")
                         .WithMany("Operacoes")
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)

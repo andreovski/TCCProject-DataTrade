@@ -15,13 +15,11 @@ namespace ProjetoDATATrade.Models
         [Display(Name = "Nome Completo"), StringLength(200, MinimumLength = 10)]
         public string NomeCompleto { get; set; }
         [Required]
-        public string Email { get; set; }
-        public DateTime Nascimento { get; set; }
+        public string EmailUsuario { get; set; }
+        public virtual Trader Trader { get; set; }
+        public virtual Carteira Carteira { get; set; }
+        public virtual Login Login { get; set; }
         public virtual ICollection<Estrategia> Estrategias { get; set; }
         public virtual ICollection<Operacao> Operacoes { get; set; }
-        public virtual ICollection<Indicador> Indicadores { get; set; }
-        public virtual ICollection<PerfilTrader> PerfilTraders { get; set; }
-
-
     }
 }
