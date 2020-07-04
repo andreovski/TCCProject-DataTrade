@@ -27,7 +27,7 @@
     <header>
         <div class="header-container">
             <div class="main-logo">
-                <a href="~/Home/Index"><img src="~/images/img/main-logo.png" alt="Logo DataTrade"></a>
+                <a href="@Url.Action("Index", "Home")"><img src="~/images/img/main-logo.png" alt="Logo DataTrade"></a>
             </div>
 
             <div class="main-info">
@@ -68,10 +68,10 @@
         <nav>
             <div class="container-nav">
                 <ul class="grid-nav">
-                    <li class="grid-item"><a href="~/Home/Index">Minhas Regras</a></li>
-                    @*<li class="grid-item"><a href="Perfurmance">Performance</a></li>*@
-                    <li class="grid-item"><a href="~/Home/DTrade">Diário de Trade</a></li>
-                    <li class="grid-item last"><a href="~/Home/Rentabilidade">Rentabilidade</a></li>
+                    <li class="grid-item"><a href="@Url.Action("Index", "Home")">Minhas Regras</a></li>
+                    <li class="grid-item" style="color: dimgray">Performance</li>
+                    <li class="grid-item"><a href="@Url.Action("DTrade", "Home")">Diário de Trade</a></li>
+                    <li class="grid-item last"><a href="@Url.Action("Rentabilidade", "Home")">Rentabilidade</a></li>
                 </ul>
             </div>
         </nav>
