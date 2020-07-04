@@ -274,7 +274,6 @@ A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATr
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\DTrade.cshtml.g.cs
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\partialView.cshtml.g.cs
-A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Rentabilidade.cshtml.g.cs
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -313,7 +312,6 @@ A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win-
 A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutIncomplete.cshtml.g.cs
 C:\Users\luis4296\Desktop\BK\SENAI\TDS\2020.1\TDS Portão\Projetos em Andamento\Andre_LeonardodePaula\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\luis4296\Desktop\BK\SENAI\TDS\2020.1\TDS Portão\Projetos em Andamento\Andre_LeonardodePaula\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\luis4296\Desktop\BK\SENAI\TDS\2020.1\TDS Portão\Projetos em Andamento\Andre_LeonardodePaula\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -633,15 +631,11 @@ C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\ne
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.TagHelpers.input.cache
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.TagHelpers.output.cache
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.RazorCoreGenerate.cache
-C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
-C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\DTrade.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\partialView.cshtml.g.cs
-C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Home\Rentabilidade.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutIncomplete.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -651,10 +645,33 @@ C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\ne
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\ProjetoDATATrade.pdb
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\ProjetoDATATrade.Views.dll
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\ProjetoDATATrade.Views.pdb
-C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.Views.pdb
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.dll
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.pdb
 C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.csprojAssemblyReference.cache
-A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
-A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\Login.cshtml.g.cs
+C:\Users\leona\Desktop\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\Register.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\NPOI.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\Login.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\Register.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\ErrorMessageViewLogin.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Authentication\ErrorMessageViewRegister.cshtml.g.cs

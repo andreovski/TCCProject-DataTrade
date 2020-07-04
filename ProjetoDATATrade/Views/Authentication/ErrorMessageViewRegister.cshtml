@@ -1,0 +1,49 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('.modal').modal('show');
+    });
+</script>
+<style>
+    * {
+        color: #1b1b1b;
+    }
+
+    .modal {
+        background: #1b1b1b; 
+        position: absolute;
+    }
+
+    .modal-content {
+        background: #c61919;
+        padding: 10px;
+        font-size: 18px;
+        width: fit-content;
+        border-radius: 7px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border: solid #8b0000 2.5px;
+    }
+
+    .modal-header {
+        margin-bottom: 8px;
+    }
+</style>
+<div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Erro ao fazer cadastro</h4>
+            </div>
+            <div class="modal-body">
+                @Model
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@

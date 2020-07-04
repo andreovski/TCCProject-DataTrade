@@ -19,7 +19,7 @@ namespace ProjetoDATATrade.Data
         public DbSet<Operacao> Operacoes { get; set; }
         public DbSet<PerfilTrader> PerfilTraders { get; set; }
         public DbSet<Trader> Traders { get; set; }
-        public DbSet<Login> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
 
         //protected override void OnModelCreating(ModelBuilder builder)

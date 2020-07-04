@@ -1,10 +1,13 @@
 ﻿@model ProjetoDATATrade.Models.Usuario
-@model ProjetoDATATrade.Models.Login
 
 @{
     Layout = null;
 }
 
+@if (TempData["sErrMsg"] != null)
+{
+    Html.RenderPartial("ErrorMessageViewRegister", TempData["sErrMsg"]);
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,13 +26,13 @@
             <hr>
             <div class="card">
                 <h1 class="text-h1">Criar uma conta</h1>
-                <form name="dados" asp-action="Registro" asp-controller="Auth" method="post">
+                <form name="dados" asp-action="Register" asp-controller="Auth" method="post">
                     <div>
                         <input required type="text" id="name" placeholder="Nome" asp-for="NomeCompleto">
                         <span class="error"></span>
                     </div>
                     <div>
-                        <input required type="email" placeholder="E-mail" asp-for="EmailUsuario">
+                        <input required type="email" placeholder="E-mail" asp-for="Email">
                         <span class="error"></span>
                     </div>
                     <div>
@@ -44,7 +47,7 @@
                     </div>
                     <div class="bottom">
                         <div class="arrow">
-                            <a href="#"><img src="~/css/register/svg/arrow.svg" alt="Voltar"></a>
+                            <a href="@Url.Action("Login", "Authentication")"><img src="~/css/register/svg/arrow.svg" alt="Voltar"></a>
                         </div>
                         <button type="submit" class="btnReg">Registrar-se</button>
                     </div>

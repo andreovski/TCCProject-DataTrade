@@ -10,12 +10,13 @@ namespace ProjetoDATATrade.Models
     public class Usuario
     {
         [Key]
-        public int UsuarioID{ get; set; }
+        public int? UsuarioID{ get; set; }
+
         [Required]
         [Display(Name = "Nome Completo"), StringLength(200, MinimumLength = 10)]
         public string NomeCompleto { get; set; }
         [Required]
-        public string EmailUsuario { get; set; }
+        public string Email { get; set; }
         public virtual Trader Trader { get; set; }
         public virtual Carteira Carteira { get; set; }
         public virtual Login Login { get; set; }

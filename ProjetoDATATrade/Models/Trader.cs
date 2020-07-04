@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 namespace ProjetoDATATrade.Models
 {
     public class Trader
-    {    
+    {
+        [Key]
+        public int TraderID { get; set; }
         [ForeignKey("UsuarioID")]
         public int UsuarioID { get; set; }
         [ForeignKey("PefilTraderID")]
         public int PerfilTraderID { get; set; }
-        [ForeignKey("IndicadorID")]
-        public int IndicadorID { get; set; }
-        [Key]
-        public int TraderID { get; set; }
-        [Required]
-        [Display(Name = "Perfil do Trader")]
-        public string Perfil { get; set; }
+
+
+        //[Required]
+        //[Display(Name = "Perfil do Trader")]
+        //public string Perfil { get; set; }
         [Required]
         [Display(Name = "Dias de Operação")]
-        public string DiasOperacao { get; set; }
+        public string DiasTrader { get; set; }
         [Required]
         [Display(Name = "Horário de Operação")]
-        public string HorarioOperacao { get; set; }
+        public string HorarioTrader { get; set; }
         [Display(Name = "Objetivo de Ganho Diário")]
         public float ObjetivoGanhoDiario { get; set; }
         [Display(Name = "Objetivo de Ganho Semanal")]
@@ -42,8 +42,8 @@ namespace ProjetoDATATrade.Models
         [Required]
         [Display(Name = "Ativo Operado")]
         public string AtivoOperado { get; set; }
-        [Required]
-        public string IndicadorTrader { get; set; }
+        //[Required]
+        //public string IndicadorTrader { get; set; }
         [Required]
         [Display(Name = "Principais Candles")]
         public string PrincipaisCandle { get; set; }
@@ -51,6 +51,7 @@ namespace ProjetoDATATrade.Models
         public DateTime TempoInvestimento { get; set; }
         [Display(Name = "Investimento Mensal")]
         public float InvestimentoMensal { get; set; }
+
         public virtual Usuario Usuario { get; set; }
         public virtual PerfilTrader PerfilTrader { get; set; }
         public ICollection<Indicador> Indicadores { get; set; }

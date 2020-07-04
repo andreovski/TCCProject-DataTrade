@@ -1,11 +1,16 @@
 ﻿@model ProjetoDATATrade.Models.Login
 
 @{
-Layout = null;
+    Layout = null;
+}
+
+@if (TempData["sErrMsg"] != null)
+{
+    Html.RenderPartial("ErrorMessageViewLogin", TempData["sErrMsg"]);
 }
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +18,6 @@ Layout = null;
     <title>Login</title>
     <script src="~/js/validationLoginForm.js" defer></script>
 </head>
-
 <body>
     <div class="back">
         <div class="container">
@@ -22,13 +26,9 @@ Layout = null;
             </div>
             <hr>
             <div class="card">
-                @if( (ViewData["MSG_E"] != null))
-                {
-                    <span class="alert">@ViewData["MSG_E"]</span>
-                }
-                <form method="post" asp-action="Login" asp-controller="Auth">
+                <form method="post" asp-action="Login" asp-controller="Authentication">
                     <div>
-                        <input required type="email" placeholder="E-mail" asp-for="EmailLogin">
+                        <input required type="email" placeholder="E-mail" asp-for="Email">
                         <span class="error"></span>
                     </div>
                     <div>
@@ -37,14 +37,14 @@ Layout = null;
                     </div>
 
                     <button type="submit" class="btnLogin">Login</button>
+
                 </form>
                 <div class="options">
                     <a href="#" id="Forgot">Esqueci a senha!</a>
-                    <a href="#" id="Register">Registrar-se</a>
+                    <a href="@Url.Action("Register", "Authentication")" id="Register">Registrar-se</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

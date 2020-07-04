@@ -4,19 +4,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using NPOI.SS.Formula.Functions;
 
 namespace ProjetoDATATrade.Models
 {
     public class Login
     {
-        
-        [ForeignKey("UsuarioID")]
-        public int UsuarioID { get; set; }
         [Key]
         public int LoginID { get; set; }
-        [Required]
-        public string EmailLogin { get; set; }
-        [Required]
+        [ForeignKey("UsuarioID")]
+        public int? UsuarioID { get; set; }
+
+        public string Email { get; set; }
         public string Senha { get; set; }
 
         public virtual Usuario Usuario { get; set; }

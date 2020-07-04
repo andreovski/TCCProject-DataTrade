@@ -57,7 +57,7 @@ namespace ProjetoDATATrade.Data
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NomeEstrategia")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -90,9 +90,12 @@ namespace ProjetoDATATrade.Data
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Titulo")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TradeID")
+                        .HasColumnType("int");
 
                     b.Property<int?>("TraderID")
                         .HasColumnType("int");
@@ -111,23 +114,22 @@ namespace ProjetoDATATrade.Data
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("EmailLogin")
-                        .IsRequired()
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Senha")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioID")
+                    b.Property<int?>("UsuarioID")
                         .HasColumnType("int");
 
                     b.HasKey("LoginID");
 
                     b.HasIndex("UsuarioID")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[UsuarioID] IS NOT NULL");
 
-                    b.ToTable("Login");
+                    b.ToTable("Logins");
                 });
 
             modelBuilder.Entity("ProjetoDATATrade.Models.Operacao", b =>
@@ -199,7 +201,7 @@ namespace ProjetoDATATrade.Data
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Titulo")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -219,18 +221,11 @@ namespace ProjetoDATATrade.Data
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DiasOperacao")
+                    b.Property<string>("DiasTrader")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("HorarioOperacao")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IndicadorID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("IndicadorTrader")
+                    b.Property<string>("HorarioTrader")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -254,10 +249,6 @@ namespace ProjetoDATATrade.Data
 
                     b.Property<float>("ObjetivoGanhoSemanal")
                         .HasColumnType("real");
-
-                    b.Property<string>("Perfil")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PerfilTraderID")
                         .HasColumnType("int");
@@ -285,12 +276,12 @@ namespace ProjetoDATATrade.Data
 
             modelBuilder.Entity("ProjetoDATATrade.Models.Usuario", b =>
                 {
-                    b.Property<int>("UsuarioID")
+                    b.Property<int?>("UsuarioID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("EmailUsuario")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -301,7 +292,7 @@ namespace ProjetoDATATrade.Data
 
                     b.HasKey("UsuarioID");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("ProjetoDATATrade.Models.Carteira", b =>
@@ -333,9 +324,7 @@ namespace ProjetoDATATrade.Data
                 {
                     b.HasOne("ProjetoDATATrade.Models.Usuario", "Usuario")
                         .WithOne("Login")
-                        .HasForeignKey("ProjetoDATATrade.Models.Login", "UsuarioID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProjetoDATATrade.Models.Login", "UsuarioID");
                 });
 
             modelBuilder.Entity("ProjetoDATATrade.Models.Operacao", b =>
@@ -346,7 +335,7 @@ namespace ProjetoDATATrade.Data
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjetoDATATrade.Models.Usuario", null)
+                    b.HasOne("ProjetoDATATrade.Models.Usuario", "Usuario")
                         .WithMany("Operacoes")
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -10,15 +10,16 @@ namespace ProjetoDATATrade.Models
 {
     public class Carteira
     {
-      
-        [ForeignKey("UsuarioID")]
-        public int UsuarioID { get; set; }
         [Key]
         public int CarteiraID { get; set; }
+        [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
+
         public float Saldo { get; set; }
         [Display(Name = "Total Acumalado")]
         public float TotalAcumulado { get; set; }
         public float Lucro { get; set; }
+
         public virtual Usuario Usuario { get; set; }
     }
 }
