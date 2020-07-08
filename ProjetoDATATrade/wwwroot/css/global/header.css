@@ -229,6 +229,11 @@ nav {
   margin-left: 50%;
 }
 
+.inactive {
+  color: rgb(172, 172, 172);
+  cursor: default;
+}
+
 @media (max-width: 850px) {
   .grid-nav li:not(.last)::after  {
     content: none;

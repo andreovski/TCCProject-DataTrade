@@ -12,7 +12,7 @@ namespace ProjetoDATATrade.Models
         [Key]
         public int InidicadorID { get; set; }
         [ForeignKey("TradeID")]
-        public int TradeID { get; set; }
+        public int TraderID { get; set; }
 
         [Required]
         public string Nome { get; set; }

@@ -11,10 +11,11 @@ namespace ProjetoDATATrade.Models
     {
         [Key]
         public int OperacaoID { get; set; }
-        [ForeignKey("UsuarioID")]
-        public int UsuarioID { get; set; }
+
         [ForeignKey("EstrategiaID")]
         public int EstrategiaID { get; set; }
+        [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
 
         [Required]
         public string Ativo{ get; set; }
@@ -40,7 +41,7 @@ namespace ProjetoDATATrade.Models
         [Required]
         public float Lote { get; set; }
         [Display(Name = "Numero da Operacao")]
-        public int NumeroOperacao { get; set; }
+        public int NumeroOp { get; set; }
 
         public virtual Usuario Usuario { get; set; }
         public virtual Estrategia Estrategia { get; set; }

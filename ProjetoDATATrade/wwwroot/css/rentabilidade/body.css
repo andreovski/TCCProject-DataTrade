@@ -16,6 +16,12 @@
     min-width: 750px;
     background: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+    .card hr {
+      width: 95%;
+      height: 1px;
+      border: 1px solid;
+      color: rgba(00, 00, 00, 0.5);
+    }
     .container .card .header {
       display: flex;
       background: #262626;
@@ -26,16 +32,20 @@
       .container .card .header h2 {
         font-weight: 450;
         font-size: 24px; }
-      .container .card .header p {
+      .container .card .header select {
         font-weight: 400;
         font-size: 18px;
         margin-left: auto;
         margin-right: 10px;
         padding-right: 30px;
-        background: url("../../images/icons/arrow.svg") no-repeat right center; }
+        color: #fff;
+        cursor: pointer;
+        background: #262626;
+        border: none; }
     .container .card .body {
       display: grid;
-      grid-template-rows: 150px 1fr 200px;
+      grid-template-rows: 150px 1fr;
+      margin-bottom: 4%;
       width: 95%;
       max-width: 950px;
       align-items: center; }

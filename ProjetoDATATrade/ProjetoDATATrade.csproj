@@ -5,12 +5,56 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\20200701224128_updatetable2.cs" />
+    <Compile Remove="Data\20200701224128_updatetable2.Designer.cs" />
     <Compile Remove="Data\20200701232405_updatetable3.cs" />
     <Compile Remove="Data\20200701232405_updatetable3.Designer.cs" />
+    <Compile Remove="Data\20200701233100_updatebase1.cs" />
+    <Compile Remove="Data\20200701233100_updatebase1.Designer.cs" />
     <Compile Remove="Data\20200701234318_updatebase3.cs" />
     <Compile Remove="Data\20200701234318_updatebase3.Designer.cs" />
     <Compile Remove="Data\20200701235703_updatebase4.cs" />
     <Compile Remove="Data\20200701235703_updatebase4.Designer.cs" />
+    <Compile Remove="Data\20200702000107_newdatabase.cs" />
+    <Compile Remove="Data\20200702000107_newdatabase.Designer.cs" />
+    <Compile Remove="Data\20200702000955_newdatabase1.cs" />
+    <Compile Remove="Data\20200702000955_newdatabase1.Designer.cs" />
+    <Compile Remove="Data\20200704025331_newdata.cs" />
+    <Compile Remove="Data\20200704025331_newdata.Designer.cs" />
+    <Compile Remove="Data\20200704083233_newdatabas.cs" />
+    <Compile Remove="Data\20200704083233_newdatabas.Designer.cs" />
+    <Compile Remove="Data\20200704084340_newdatabase33.cs" />
+    <Compile Remove="Data\20200704084340_newdatabase33.Designer.cs" />
+    <Compile Remove="Data\20200704085930_dsd.cs" />
+    <Compile Remove="Data\20200704085930_dsd.Designer.cs" />
+    <Compile Remove="Data\20200704091127_sads.cs" />
+    <Compile Remove="Data\20200704091127_sads.Designer.cs" />
+    <Compile Remove="Data\20200704093432_plsgo.cs" />
+    <Compile Remove="Data\20200704093432_plsgo.Designer.cs" />
+    <Compile Remove="Data\20200704140959_nullsValue.cs" />
+    <Compile Remove="Data\20200704140959_nullsValue.Designer.cs" />
+    <Compile Remove="Data\20200704201209_newdatabase0407.cs" />
+    <Compile Remove="Data\20200704201209_newdatabase0407.Designer.cs" />
+    <Compile Remove="Data\20200704201945_databased.cs" />
+    <Compile Remove="Data\20200704201945_databased.Designer.cs" />
+    <Compile Remove="Data\20200704202540_plsgonow.cs" />
+    <Compile Remove="Data\20200704202540_plsgonow.Designer.cs" />
+    <Compile Remove="Data\20200704203220_asdaasd.cs" />
+    <Compile Remove="Data\20200704203220_asdaasd.Designer.cs" />
+    <Compile Remove="Data\20200704205537_agoravai.cs" />
+    <Compile Remove="Data\20200704205537_agoravai.Designer.cs" />
+    <Compile Remove="Data\20200704211353_asdsad.cs" />
+    <Compile Remove="Data\20200704211353_asdsad.Designer.cs" />
+    <Compile Remove="Data\20200704213313_adeuspq.cs" />
+    <Compile Remove="Data\20200704213313_adeuspq.Designer.cs" />
+    <Compile Remove="Data\20200704222208_sidoka.cs" />
+    <Compile Remove="Data\20200704222208_sidoka.Designer.cs" />
+    <Compile Remove="Data\20200704222332_kkkk.cs" />
+    <Compile Remove="Data\20200704222332_kkkk.Designer.cs" />
+    <Compile Remove="Data\20200704222651_sqltroll.cs" />
+    <Compile Remove="Data\20200704222651_sqltroll.Designer.cs" />
+    <Compile Remove="Data\20200706221316_newdatase.cs" />
+    <Compile Remove="Data\20200706221316_newdatase.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

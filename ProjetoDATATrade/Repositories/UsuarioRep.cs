@@ -22,10 +22,11 @@ namespace ProjetoDATATrade.Repositories
             _dbContext.SaveChanges();
         }
 
-        public void Cadastrar(Usuario usuario)
+        public Usuario Cadastrar(Usuario usuario)
         {
             _dbContext.Add(usuario);
             _dbContext.SaveChanges();
+            return usuario;
         }
 
         public void ExcluirCadastro(int id)
@@ -39,17 +40,14 @@ namespace ProjetoDATATrade.Repositories
             return _dbContext.Usuarios.Find(id);
         }
 
-        public bool ValidarEmail(string Email)
+        public bool VerificarEmail(string Email)
         {
-            var usuario = _dbContext.Usuarios.Single(u => u.Email == Email);/*.FirstOrDefault();*/
-            if (usuario != null)
-            {
-                return true;
-            }
-            else
+            var existe = _dbContext.Usuarios.Where(u => u.Email == Email).FirstOrDefault();
+            if (existe == null)
             {
                 return false;
             }
+            return true;
         }
     }
 }

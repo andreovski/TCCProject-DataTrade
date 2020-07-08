@@ -23,12 +23,14 @@ namespace ProjetoDATATrade.Libs.LoginLibs
             _sessao.Cadastrar(key, loginJSONstr);
         }
         //recuperando o usuario apos serializa-lo para validar a sessao
-        public Login GetLogin()
+        public Login GetLogin(Login login)
         {
             if (_sessao.Existe(key))
             {
                 string loginJSONstr = _sessao.Consultar(key);
-                return JsonConvert.DeserializeObject<Login>(loginJSONstr);
+                var log = JsonConvert.DeserializeObject<Login>(loginJSONstr);
+                login = log;
+                return login;
             }
             else
             {

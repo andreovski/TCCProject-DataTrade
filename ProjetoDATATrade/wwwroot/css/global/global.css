@@ -50,6 +50,23 @@ input {
   cursor: pointer;
 }
 
+.combobox {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 25px auto 0;
+  padding-right: 30px;
+  color: #262626;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  width: 100%;
+}
+
+
+button {
+  cursor: pointer;
+}
+
 @keyframes modal {
   from {
     opacity: 0;

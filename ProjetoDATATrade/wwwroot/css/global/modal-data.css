@@ -16,7 +16,7 @@
     background: #E1E1E1;
     width: 60%;
     min-width: 450px;
-    height: auto;
+    height: 85%;
     position: fixed;
     animation: modal .6s;
     overflow-y: auto; }
@@ -32,54 +32,69 @@
       margin: 25px;
       text-align: center; }
     .md-modal-container .md-modal .md-body {
+      justify-content: center;
+      display: flex;
       padding: 2% 5%; }
       .md-modal-container .md-modal .md-body .md-form {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        margin: 10px 60px;
+        display: flex;
+        flex-wrap: wrap; }
         .md-modal-container .md-modal .md-body .md-form .md-form-left {
           display: flex;
-          flex-direction: column; }
+          justify-content: center;
+          flex-wrap: wrap;}
           .md-modal-container .md-modal .md-body .md-form .md-form-left .input {
             max-width: 350px;
-            margin: 15px 0; }
+            margin: 15px 10px; }
           .md-modal-container .md-modal .md-body .md-form .md-form-left .md-radio-btn {
-            margin: -3px 0 15px;
-            background: none; }
+            display: flex;
+            margin: 0 15px 25px;
+            text-align: center;}
+            .md-modal-container .md-modal .md-body .md-form .md-form-left .group-1 {
+              display: flex;
+              flex-direction: column;
+              margin-right: auto;
+            }
+            .md-modal-container .md-modal .md-body .md-form .md-form-left .md-file-input {
+              margin: 5% 0;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+            }
             .md-modal-container .md-modal .md-body .md-form .md-form-left .md-radio-btn label {
-              margin-right: 13px; }
+              margin: 0 13px;}
           .md-modal-container .md-modal .md-body .md-form .md-form-left .md-input-flex {
             display: flex; }
           .md-modal-container .md-modal .md-body .md-form .md-form-left .md-new-strategy {
             position: relative;
             margin-bottom: 5px;
-            margin-left: 3px; }
+            margin-left: 10px; }
             .md-modal-container .md-modal .md-body .md-form .md-form-left .md-new-strategy a {
               font-size: 11px;
               letter-spacing: 0.5;
               color: #40416B;
               font-weight: 420; }
-        .md-modal-container .md-modal .md-body .md-form .md-image-upload {
+        .md-modal-container .md-modal .md-body .md-form {
           margin: 10px 60px;
           display: flex;
           flex-direction: column;
           align-items: center; }
-          .md-modal-container .md-modal .md-body .md-form .md-image-upload img {
+          .md-modal-container .md-modal .md-body .md-form img {
             width: 250px;
             cursor: pointer; }
-          .md-modal-container .md-modal .md-body .md-form .md-image-upload #file-input {
+          .md-modal-container .md-modal .md-body .md-form #file-input {
             display: none; }
-          .md-modal-container .md-modal .md-body .md-form .md-image-upload .input {
+          .md-modal-container .md-modal .md-body .md-form .input {
             position: relative;
             margin-top: 42px;
             margin-left: 6px; }
-          .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn {
+          .md-modal-container .md-modal .md-body .md-form .md-save-btn {
             width: 100%;
             display: flex;
             flex-direction: row-reverse;
-            position: relative;
-            margin-top: 15px;
-            left: 35px; }
-            .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn button {
+            margin-top: 45px;
+            margin-right: 35px;}
+            .md-modal-container .md-modal .md-body .md-form .md-save-btn button {
               font-size: 18px;
               padding: 6px 25px;
               background-color: #40416B;
@@ -87,7 +102,7 @@
               color: white;
               border-radius: 5px;
               cursor: pointer; }
-            .md-modal-container .md-modal .md-body .md-form .md-image-upload .md-save-btn button:active {
+            .md-modal-container .md-modal .md-body .md-form .md-save-btn button:active {
               box-shadow: inset 3px 3px 20px -10px rgba(0, 0, 0, 0.8); }
 
 @media (max-width: 1260px) {
@@ -97,7 +112,7 @@
       justify-self: center; }
     .md-modal-container .md-modal .input {
       width: 300px; }
-    .md-modal-container .md-modal .md-image-upload .input {
+    .md-modal-container .md-modal .input {
       top: -10px;
       margin-bottom: 10px; } }
 

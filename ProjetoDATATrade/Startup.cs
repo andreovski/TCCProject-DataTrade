@@ -35,6 +35,7 @@ namespace ProjetoDATATrade
             services.AddHttpContextAccessor();
             services.AddScoped<ICarteiraRep, CarteiraRep>();
             services.AddScoped<IEstrategiaRep, EstrategiaRep>();
+            services.AddScoped<IIndicadorRep, IndicadorRep>();
             services.AddScoped<ILoginRep, LoginRep>();
             services.AddScoped<IOperacaoRep, OperacaoRep>();
             services.AddScoped<ITraderRep, TraderRep>();
@@ -70,6 +71,7 @@ namespace ProjetoDATATrade
             app.UseHttpsRedirection();
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseCookiePolicy();
             app.UseSession();
 
             app.UseRouting();

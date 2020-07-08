@@ -22,6 +22,19 @@ namespace ProjetoDATATrade.Repositories
             _dbContext.SaveChanges();
         }
 
+        public Estrategia LocalizarEstrategia(Estrategia estrategia)
+        {
+            if (estrategia.EstrategiaID == 0)
+            {
+                estrategia = _dbContext.Estrategias.Where(e => e.Nome == estrategia.Nome).First();
+                return estrategia;
+            }
+            else
+            {
+                estrategia = _dbContext.Estrategias.Where(e => e.EstrategiaID == estrategia.EstrategiaID).First();
+                return estrategia;
+            }
+        }
         public void CadastrarEstrategia(Estrategia estrategia)
         {
             _dbContext.Add(estrategia);

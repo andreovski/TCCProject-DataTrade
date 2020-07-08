@@ -12,15 +12,12 @@ namespace ProjetoDATATrade.Models
     {
         [Key]
         public int TraderID { get; set; }
-        [ForeignKey("UsuarioID")]
-        public int UsuarioID { get; set; }
+
         [ForeignKey("PefilTraderID")]
         public int PerfilTraderID { get; set; }
+        [ForeignKey("UsuarioID")]
+        public int UsuarioID { get; set; }
 
-
-        //[Required]
-        //[Display(Name = "Perfil do Trader")]
-        //public string Perfil { get; set; }
         [Required]
         [Display(Name = "Dias de Operação")]
         public string DiasTrader { get; set; }
@@ -42,8 +39,8 @@ namespace ProjetoDATATrade.Models
         [Required]
         [Display(Name = "Ativo Operado")]
         public string AtivoOperado { get; set; }
-        //[Required]
-        //public string IndicadorTrader { get; set; }
+        [Required]
+        public string IndicadorTrader { get; set; }
         [Required]
         [Display(Name = "Principais Candles")]
         public string PrincipaisCandle { get; set; }

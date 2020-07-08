@@ -11,8 +11,10 @@ namespace ProjetoDATATrade.Models
     {
         [Key]
         public int PerfilTraderID { get; set; }
+
         [Required]
         public string Nome{ get; set; }
+
         public virtual Trader Trader { get; set; }
     }
 }

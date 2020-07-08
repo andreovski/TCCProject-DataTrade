@@ -8910,19 +8910,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\André\\.nuget\\packages\\": {}
+    "C:\\Users\\leona\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
       "projectName": "ProjetoDATATrade",
-      "projectPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
-      "packagesPath": "C:\\Users\\André\\.nuget\\packages\\",
-      "outputPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\obj\\",
+      "projectPath": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\André\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9015,7 +9015,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

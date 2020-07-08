@@ -9,7 +9,6 @@
   display: none;
   justify-content: center;
   align-items: center;
-  
 }
 
 .ms-modal-container.on {
@@ -21,7 +20,7 @@
   background: #E1E1E1;
   width: 60%;
   min-width: 430px;
-  height: 65%;
+  height: 85%;
   position: fixed;
   overflow-y: auto;
 }
@@ -58,9 +57,24 @@
 }
 
 .ms-wallet .ms-wallet-value {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
   color: white;
   padding-bottom: 2px;
+  z-index: 100;
 }
+
+.inputNone {
+  display: flex;
+  background: none;
+  border: none;
+  height: 15px;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+}
+
 
 .ms-close {
   float: right;
@@ -106,6 +120,10 @@
   justify-content: center;
 }
 
+.ms-line:last-child {
+  padding-top: 2%;
+}
+
 .ms-line hr {
   border: 1px solid rgba(0, 0, 0, .1);
   background: rgba(0, 0, 0, .5);
@@ -114,14 +132,16 @@
 
 .ms-form {
   display: flex;
-  text-align: center;
   flex-wrap: wrap;
   margin-top: 2%;
-  padding: 0 25px; 
+  justify-content: space-around;
+}
+
+.ms-first-settings {
+  margin-bottom: 2%;
 }
 
 .ms-form input {
-  width: ;
   margin: 12px 5px;
 }
 
@@ -129,19 +149,7 @@
   width: 60px;
 }
 
-.input-name {
-  width: 250px;
-}
-
-.input-sec-name {
-  width: 250px;
-}
-
-.input-date-nasc {
-  width: 200px;
-}
-
-.input-email {
+.input {
   width: 250px;
 }
 
@@ -150,17 +158,25 @@
   top: 24px;
 }
 
-.input-password,
-.input-new-password {
-  width: 220px;
+h1 {
+  text-align: center;
+  margin-top: 3%;
+  font-weight: normal;
+}
+
+.ms-perfilTrader-settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2%;
 }
 
 .ms-button {
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
-  margin: 20px 0 5px 0;
-  justify-content: center;
+  margin: 20px 3% 3%;
+  justify-content: flex-end;
+
 }
 
 .ms-button  button {
@@ -171,6 +187,8 @@
   color: white;
   border-radius: 5px;
 }
+
+
 
 @media (max-width: 950px) {
   .ms-modal {
@@ -196,7 +214,6 @@
 
   .ms-form {
     display: flex;
-    place-content: center;
     height: 570px;
     margin: 0 !important;
   }
@@ -205,14 +222,14 @@
     width: 100%;
   }
 
-  input {
+  .ms-form input {
     display: flex;
     margin: 0 0 0 0 !important ;
     height: 45px !important;
     width: 100% !important;
   }
 
-  input:not(.input-name) {
+  .ms-form input:not(.input-name) {
     margin: 20px 0 0 0 !important ;
   }
 
@@ -222,8 +239,8 @@
   }
 
   button {
-    width: 249px;
+    width: 100%;
     height: 45px;
-    margin-top: 15px;
+    margin: 15px 0;
   }
 }

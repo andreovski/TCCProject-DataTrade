@@ -11,8 +11,6 @@ namespace ProjetoDATATrade.Models
     {
         [Key]
         public int EstrategiaID { get; set; }
-        [ForeignKey("UsuarioID")]
-        public int UsuarioID { get; set; }
 
         [Required]
         [Display(Name = "Nome da Estrategia")]
@@ -30,7 +28,6 @@ namespace ProjetoDATATrade.Models
         [Display(Name = "Quando?")]
         public string Quando { get; set; }
 
-        public virtual Usuario Usuario { get; set; }
         public ICollection<Operacao> Operacoes { get; set; }
 
     }

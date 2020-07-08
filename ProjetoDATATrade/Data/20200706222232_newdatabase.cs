@@ -3,14 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ProjetoDATATrade.Data
 {
-    public partial class updatetable2 : Migration
+    public partial class newdatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Carteiras_Usuarios_UsuarioID",
-                table: "Carteiras");
-
             migrationBuilder.DropForeignKey(
                 name: "FK_Estrategias_Usuarios_UsuarioID",
                 table: "Estrategias");
@@ -24,44 +20,48 @@ namespace ProjetoDATATrade.Data
                 table: "Logins");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Operacoes_Usuarios_UsuarioID",
-                table: "Operacoes");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_perfilTraders_Usuarios_UsuarioID",
                 table: "perfilTraders");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Traders_Usuarios_UsuarioID",
-                table: "Traders");
 
             migrationBuilder.DropIndex(
                 name: "IX_Traders_UsuarioID",
                 table: "Traders");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_perfilTraders",
+                table: "perfilTraders");
 
             migrationBuilder.DropIndex(
                 name: "IX_perfilTraders_UsuarioID",
                 table: "perfilTraders");
 
             migrationBuilder.DropIndex(
+                name: "IX_Logins_UsuarioID",
+                table: "Logins");
+
+            migrationBuilder.DropIndex(
                 name: "IX_Indicadores_UsuarioID",
                 table: "Indicadores");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Estrategias_UsuarioID",
+                table: "Estrategias");
 
             migrationBuilder.DropIndex(
                 name: "IX_Carteiras_UsuarioID",
                 table: "Carteiras");
 
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Usuarios",
+            migrationBuilder.DropColumn(
+                name: "Nascimento",
                 table: "Usuarios");
 
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Logins",
-                table: "Logins");
+            migrationBuilder.DropColumn(
+                name: "DiasOperacao",
+                table: "Traders");
 
-            migrationBuilder.DropIndex(
-                name: "IX_Logins_UsuarioID",
-                table: "Logins");
+            migrationBuilder.DropColumn(
+                name: "HorarioOperacao",
+                table: "Traders");
 
             migrationBuilder.DropColumn(
                 name: "Indicadores",
@@ -72,6 +72,10 @@ namespace ProjetoDATATrade.Data
                 table: "Traders");
 
             migrationBuilder.DropColumn(
+                name: "Titulo",
+                table: "perfilTraders");
+
+            migrationBuilder.DropColumn(
                 name: "UsuarioID",
                 table: "perfilTraders");
 
@@ -80,43 +84,43 @@ namespace ProjetoDATATrade.Data
                 table: "Operacoes");
 
             migrationBuilder.DropColumn(
+                name: "NumeroOperacao",
+                table: "Operacoes");
+
+            migrationBuilder.DropColumn(
+                name: "Titulo",
+                table: "Indicadores");
+
+            migrationBuilder.DropColumn(
                 name: "UsuarioID",
                 table: "Indicadores");
 
             migrationBuilder.DropColumn(
-                name: "Email",
-                table: "Usuarios");
+                name: "NomeEstrategia",
+                table: "Estrategias");
 
             migrationBuilder.DropColumn(
-                name: "Nascimento",
-                table: "Usuarios");
-
-            migrationBuilder.DropColumn(
-                name: "Email",
-                table: "Logins");
+                name: "UsuarioID",
+                table: "Estrategias");
 
             migrationBuilder.RenameTable(
-                name: "Usuarios",
-                newName: "Usuario");
-
-            migrationBuilder.RenameTable(
-                name: "Logins",
-                newName: "Login");
-
-            migrationBuilder.AddColumn<int>(
-                name: "IndicadorID",
-                table: "Traders",
-                nullable: false,
-                defaultValue: 0);
+                name: "perfilTraders",
+                newName: "PerfilTraders");
 
             migrationBuilder.AddColumn<string>(
-                name: "IndicadorTrader",
+                name: "DiasTrader",
                 table: "Traders",
                 nullable: false,
                 defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
-                name: "Perfil",
+                name: "HorarioTrader",
+                table: "Traders",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "IndicadorTrader",
                 table: "Traders",
                 nullable: false,
                 defaultValue: "");
@@ -126,6 +130,12 @@ namespace ProjetoDATATrade.Data
                 table: "Traders",
                 nullable: false,
                 defaultValue: 0);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Nome",
+                table: "PerfilTraders",
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<int>(
                 name: "EstrategiaID",
@@ -140,39 +150,60 @@ namespace ProjetoDATATrade.Data
                 defaultValue: "");
 
             migrationBuilder.AddColumn<int>(
-                name: "TraderID",
-                table: "Indicadores",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "EmailUsuario",
-                table: "Usuario",
+                name: "NumeroOp",
+                table: "Operacoes",
                 nullable: false,
-                defaultValue: "");
+                defaultValue: 0);
 
             migrationBuilder.AlterColumn<int>(
                 name: "UsuarioID",
-                table: "Login",
+                table: "Logins",
                 nullable: false,
                 oldClrType: typeof(int),
                 oldType: "int",
                 oldNullable: true);
 
+            migrationBuilder.AlterColumn<string>(
+                name: "Senha",
+                table: "Logins",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Email",
+                table: "Logins",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
+
             migrationBuilder.AddColumn<string>(
-                name: "EmailLogin",
-                table: "Login",
+                name: "Nome",
+                table: "Indicadores",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<int>(
+                name: "TradeID",
+                table: "Indicadores",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "TraderID",
+                table: "Indicadores",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Nome",
+                table: "Estrategias",
                 nullable: false,
                 defaultValue: "");
 
             migrationBuilder.AddPrimaryKey(
-                name: "PK_Usuario",
-                table: "Usuario",
-                column: "UsuarioID");
-
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Login",
-                table: "Login",
-                column: "LoginID");
+                name: "PK_PerfilTraders",
+                table: "PerfilTraders",
+                column: "PerfilTraderID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Traders_PerfilTraderID",
@@ -192,6 +223,12 @@ namespace ProjetoDATATrade.Data
                 column: "EstrategiaID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Logins_UsuarioID",
+                table: "Logins",
+                column: "UsuarioID",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Indicadores_TraderID",
                 table: "Indicadores",
                 column: "TraderID");
@@ -202,28 +239,6 @@ namespace ProjetoDATATrade.Data
                 column: "UsuarioID",
                 unique: true);
 
-            migrationBuilder.CreateIndex(
-                name: "IX_Login_UsuarioID",
-                table: "Login",
-                column: "UsuarioID",
-                unique: true);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Carteiras_Usuario_UsuarioID",
-                table: "Carteiras",
-                column: "UsuarioID",
-                principalTable: "Usuario",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Estrategias_Usuario_UsuarioID",
-                table: "Estrategias",
-                column: "UsuarioID",
-                principalTable: "Usuario",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
-
             migrationBuilder.AddForeignKey(
                 name: "FK_Indicadores_Traders_TraderID",
                 table: "Indicadores",
@@ -233,10 +248,10 @@ namespace ProjetoDATATrade.Data
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Login_Usuario_UsuarioID",
-                table: "Login",
+                name: "FK_Logins_Usuarios_UsuarioID",
+                table: "Logins",
                 column: "UsuarioID",
-                principalTable: "Usuario",
+                principalTable: "Usuarios",
                 principalColumn: "UsuarioID",
                 onDelete: ReferentialAction.Cascade);
 
@@ -249,62 +264,30 @@ namespace ProjetoDATATrade.Data
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Operacoes_Usuario_UsuarioID",
-                table: "Operacoes",
-                column: "UsuarioID",
-                principalTable: "Usuario",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Traders_perfilTraders_PerfilTraderID",
+                name: "FK_Traders_PerfilTraders_PerfilTraderID",
                 table: "Traders",
                 column: "PerfilTraderID",
-                principalTable: "perfilTraders",
+                principalTable: "PerfilTraders",
                 principalColumn: "PerfilTraderID",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Traders_Usuario_UsuarioID",
-                table: "Traders",
-                column: "UsuarioID",
-                principalTable: "Usuario",
-                principalColumn: "UsuarioID",
                 onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Carteiras_Usuario_UsuarioID",
-                table: "Carteiras");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Estrategias_Usuario_UsuarioID",
-                table: "Estrategias");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_Indicadores_Traders_TraderID",
                 table: "Indicadores");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Login_Usuario_UsuarioID",
-                table: "Login");
+                name: "FK_Logins_Usuarios_UsuarioID",
+                table: "Logins");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Operacoes_Estrategias_EstrategiaID",
                 table: "Operacoes");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Operacoes_Usuario_UsuarioID",
-                table: "Operacoes");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Traders_perfilTraders_PerfilTraderID",
-                table: "Traders");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Traders_Usuario_UsuarioID",
+                name: "FK_Traders_PerfilTraders_PerfilTraderID",
                 table: "Traders");
 
             migrationBuilder.DropIndex(
@@ -315,9 +298,17 @@ namespace ProjetoDATATrade.Data
                 name: "IX_Traders_UsuarioID",
                 table: "Traders");
 
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_PerfilTraders",
+                table: "PerfilTraders");
+
             migrationBuilder.DropIndex(
                 name: "IX_Operacoes_EstrategiaID",
                 table: "Operacoes");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Logins_UsuarioID",
+                table: "Logins");
 
             migrationBuilder.DropIndex(
                 name: "IX_Indicadores_TraderID",
@@ -327,20 +318,12 @@ namespace ProjetoDATATrade.Data
                 name: "IX_Carteiras_UsuarioID",
                 table: "Carteiras");
 
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Usuario",
-                table: "Usuario");
-
-            migrationBuilder.DropPrimaryKey(
-                name: "PK_Login",
-                table: "Login");
-
-            migrationBuilder.DropIndex(
-                name: "IX_Login_UsuarioID",
-                table: "Login");
+            migrationBuilder.DropColumn(
+                name: "DiasTrader",
+                table: "Traders");
 
             migrationBuilder.DropColumn(
-                name: "IndicadorID",
+                name: "HorarioTrader",
                 table: "Traders");
 
             migrationBuilder.DropColumn(
@@ -348,12 +331,12 @@ namespace ProjetoDATATrade.Data
                 table: "Traders");
 
             migrationBuilder.DropColumn(
-                name: "Perfil",
+                name: "PerfilTraderID",
                 table: "Traders");
 
             migrationBuilder.DropColumn(
-                name: "PerfilTraderID",
-                table: "Traders");
+                name: "Nome",
+                table: "PerfilTraders");
 
             migrationBuilder.DropColumn(
                 name: "EstrategiaID",
@@ -364,24 +347,49 @@ namespace ProjetoDATATrade.Data
                 table: "Operacoes");
 
             migrationBuilder.DropColumn(
+                name: "NumeroOp",
+                table: "Operacoes");
+
+            migrationBuilder.DropColumn(
+                name: "Nome",
+                table: "Indicadores");
+
+            migrationBuilder.DropColumn(
+                name: "TradeID",
+                table: "Indicadores");
+
+            migrationBuilder.DropColumn(
                 name: "TraderID",
                 table: "Indicadores");
 
             migrationBuilder.DropColumn(
-                name: "EmailUsuario",
-                table: "Usuario");
-
-            migrationBuilder.DropColumn(
-                name: "EmailLogin",
-                table: "Login");
+                name: "Nome",
+                table: "Estrategias");
 
             migrationBuilder.RenameTable(
-                name: "Usuario",
-                newName: "Usuarios");
+                name: "PerfilTraders",
+                newName: "perfilTraders");
 
-            migrationBuilder.RenameTable(
-                name: "Login",
-                newName: "Logins");
+            migrationBuilder.AddColumn<DateTime>(
+                name: "Nascimento",
+                table: "Usuarios",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AddColumn<string>(
+                name: "DiasOperacao",
+                table: "Traders",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "HorarioOperacao",
+                table: "Traders",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
 
             migrationBuilder.AddColumn<string>(
                 name: "Indicadores",
@@ -393,6 +401,13 @@ namespace ProjetoDATATrade.Data
             migrationBuilder.AddColumn<string>(
                 name: "PerfilTrader",
                 table: "Traders",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<string>(
+                name: "Titulo",
+                table: "perfilTraders",
                 type: "nvarchar(max)",
                 nullable: false,
                 defaultValue: "");
@@ -411,24 +426,11 @@ namespace ProjetoDATATrade.Data
                 defaultValue: "");
 
             migrationBuilder.AddColumn<int>(
-                name: "UsuarioID",
-                table: "Indicadores",
+                name: "NumeroOperacao",
+                table: "Operacoes",
                 type: "int",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Email",
-                table: "Usuarios",
-                type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "Nascimento",
-                table: "Usuarios",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+                defaultValue: 0);
 
             migrationBuilder.AlterColumn<int>(
                 name: "UsuarioID",
@@ -437,22 +439,53 @@ namespace ProjetoDATATrade.Data
                 nullable: true,
                 oldClrType: typeof(int));
 
-            migrationBuilder.AddColumn<string>(
+            migrationBuilder.AlterColumn<string>(
+                name: "Senha",
+                table: "Logins",
+                type: "nvarchar(max)",
+                nullable: false,
+                oldClrType: typeof(string),
+                oldNullable: true);
+
+            migrationBuilder.AlterColumn<string>(
                 name: "Email",
                 table: "Logins",
                 type: "nvarchar(max)",
                 nullable: false,
+                oldClrType: typeof(string),
+                oldNullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "Titulo",
+                table: "Indicadores",
+                type: "nvarchar(max)",
+                nullable: false,
                 defaultValue: "");
 
-            migrationBuilder.AddPrimaryKey(
-                name: "PK_Usuarios",
-                table: "Usuarios",
-                column: "UsuarioID");
+            migrationBuilder.AddColumn<int>(
+                name: "UsuarioID",
+                table: "Indicadores",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "NomeEstrategia",
+                table: "Estrategias",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "");
+
+            migrationBuilder.AddColumn<int>(
+                name: "UsuarioID",
+                table: "Estrategias",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
 
             migrationBuilder.AddPrimaryKey(
-                name: "PK_Logins",
-                table: "Logins",
-                column: "LoginID");
+                name: "PK_perfilTraders",
+                table: "perfilTraders",
+                column: "PerfilTraderID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Traders_UsuarioID",
@@ -465,27 +498,24 @@ namespace ProjetoDATATrade.Data
                 column: "UsuarioID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Logins_UsuarioID",
+                table: "Logins",
+                column: "UsuarioID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Indicadores_UsuarioID",
                 table: "Indicadores",
+                column: "UsuarioID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Estrategias_UsuarioID",
+                table: "Estrategias",
                 column: "UsuarioID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carteiras_UsuarioID",
                 table: "Carteiras",
                 column: "UsuarioID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Logins_UsuarioID",
-                table: "Logins",
-                column: "UsuarioID");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Carteiras_Usuarios_UsuarioID",
-                table: "Carteiras",
-                column: "UsuarioID",
-                principalTable: "Usuarios",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Estrategias_Usuarios_UsuarioID",
@@ -512,28 +542,12 @@ namespace ProjetoDATATrade.Data
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Operacoes_Usuarios_UsuarioID",
-                table: "Operacoes",
-                column: "UsuarioID",
-                principalTable: "Usuarios",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
                 name: "FK_perfilTraders_Usuarios_UsuarioID",
                 table: "perfilTraders",
                 column: "UsuarioID",
                 principalTable: "Usuarios",
                 principalColumn: "UsuarioID",
                 onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Traders_Usuarios_UsuarioID",
-                table: "Traders",
-                column: "UsuarioID",
-                principalTable: "Usuarios",
-                principalColumn: "UsuarioID",
-                onDelete: ReferentialAction.Cascade);
         }
     }
 }

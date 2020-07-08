@@ -9,6 +9,7 @@ namespace ProjetoDATATrade.Repositories.Interfaces
     public interface IEstrategiaRep
     {
         void CadastrarEstrategia(Estrategia estrategia);
+        public Estrategia LocalizarEstrategia(Estrategia estrategia);
         void AlterarEstrategia(Estrategia estrategia);
         void Excluir(int id);
         Estrategia ObterEstrategia(int id);
