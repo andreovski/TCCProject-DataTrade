@@ -40,13 +40,20 @@
       .container .card-container .card .card-header {
         color: #fff;
         display: flex;
-        background: #262626;
-        padding: 5px; }
-        .container .card-container .card .card-header h2 {
+        background: #262626;}
+        .container .card-container .card .card-header p {
+          margin-top: 1.5px;
+          margin: 5px;
+        }
+        .container .card-container .card .card-header .remove-btn {
           font-size: 16px;
           margin-left: auto;
-          margin-right: 8px;
           cursor: pointer;
+          background: rgb(189, 25, 25);
+          border: none;
+          padding: 2px 10px;
+          color: #fff;
+
         }
         .container .card-container .card .card-header p {
           margin-left: 5px; }
