@@ -22,11 +22,11 @@
   animation-fill-mode: backwards;
 }
 
-/* .b-on .button.sec-btn {
+.b-on .button.sec-btn {
   animation: btns .3s;
   animation-delay: 70ms;
   animation-fill-mode: backwards;
-} */
+}
 
 .add-options-btn.b-on {
   display: flex;
@@ -89,7 +89,7 @@
 
 .hover2 .text-effect {
   position: absolute;
-  bottom: 98px;
+  bottom: 158px;
   right: 90px;
 }
 

@@ -178,51 +178,6 @@
     <!-- Footer -->
     <partial name="_FooterLayout" />
 
-    <!-- Botão de inserção de dados -->
-    <div class="add-btn">
-      <div class="add-options-btn" id="btn-options">
-        <div class="hover1">
-          <button class="button fir-btn" id="btn-add-estrategia"><img src="~/images/icons/book.svg"></button>
-          <div class="text-effect">Estratégia</div>
-        </div>
-      </div>
-      <button id="add-btn-show" type="button">+</button>
-    </div>
-    
-    <!-- Modal inserir estratégia -->
-    <div class="me-modal-container" id="me-modal">
-        <div class="me-modal">
-
-            <div class="me-btn-close">
-                <img src="~/images/icons/close_bck.svg" id="close">
-            </div>
-
-            <h2>Inserir estratégia</h2>
-
-            <div class="me-body">
-                <form class="me-form" asp-controller="" asp-action="" method="POST">
-                    <div class="me-inputs">
-                        <input type="text" class="input" placeholder="Nome" asp-for="Nome">
-                        <input type="text" class="input" placeholder="Em qual ativo usa-lá?" <!--asp-for=""--> > 
-                        <input type="text" class="input" placeholder="Onde entra na operação?" <!--asp-for="Onde"--> >
-                        <input type="text" class="input" placeholder="Quando realiza a entrada?" <!--asp-for="Quando"--> >
-                    </div>
-                    <div class="me-inputs">
-                        <input type="text" class="input" placeholder="Como será a entrada?" <!--asp-for="Como"--> >
-                        <input type="text" class="input" placeholder="Por que?" <!--asp-for="Porque"--> >
-
-                        <div class="me-save-btn">
-                            <button type="submit">
-                                Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div>
-
     <!-- Modal config. de perfil -->
     <partial name="_configUser" />
 

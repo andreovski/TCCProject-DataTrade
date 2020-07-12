@@ -14,15 +14,15 @@
     <title>Title</title>
 
     <!-- CSS's -->
-    <link rel="stylesheet" href="~/css/dTrade/body.css">
+    <link rel="stylesheet" href="../../wwwroot/css/dTrade/body.css">
     <!-- CSS's Globais -->
-    <link rel="stylesheet" href="~/css/global/global.css">
-    <link rel="stylesheet" href="~/css/global/header.css">
-    <link rel="stylesheet" href="~/css/global/footer.css">
-    <link rel="stylesheet" href="~/css/global/btn-add.css">
-    <link rel="stylesheet" href="~/css/global/modal-settings.css"> <!-- prefixo 'ms' -->
-    <link rel="stylesheet" href="~/css/global/modal-data.css"> <!-- prefixo 'md' -->
-    <link rel="stylesheet" href="~/css/global/modal-estrategia.css"> <!-- prefixo 'me' -->
+    <link rel="stylesheet" href="../../wwwroot/css/global/global.css">
+    <link rel="stylesheet" href="../../wwwroot/css/global/header.css">
+    <link rel="stylesheet" href="../../wwwroot/css/global/footer.css">
+    <link rel="stylesheet" href="../../wwwroot/css/global/btn-add.css">
+    <link rel="stylesheet" href="../../wwwroot/css/global/modal-settings.css"> <!-- prefixo 'ms' -->
+    <link rel="stylesheet" href="../../wwwroot/css/global/modal-data.css"> <!-- prefixo 'md' -->
+    <link rel="stylesheet" href="../../wwwroot/css/global/modal-estrategia.css"> <!-- prefixo 'me' -->
 
 </head>
 <body>
@@ -59,7 +59,7 @@
 
                 <div class="card-body">
                     <div class="day-graphic-img">
-                        <img src="~/images/img/graphic_extend.png">
+                        <img src="../../wwwroot/images/img/graphic_extend.png">
                     </div>
                     <div class="main-table">
                         <table class="iTable">
@@ -142,8 +142,12 @@
     <!-- Botão de inserção de dados -->
     <div class="add-btn">
         <div class="add-options-btn" id="btn-options">
+            <div class="hover1">
+                <button class="button fir-btn" id="btn-add-estrategia"><img src="../../wwwroot/images/icons/book.svg"></button>
+                <div class="text-effect">Estratégia</div>
+            </div>
             <div class="hover2">
-                <button class="button fir-btn" id="btn-add-data"><img src="~/images/icons/file-plus.svg"></button>
+                <button class="button sec-btn" id="btn-add-data"><img src="../../wwwroot/images/icons/file-plus.svg"></button>
                 <div class="text-effect">Dados</div>
             </div>
         </div>
@@ -155,7 +159,7 @@
         <div class="md-modal">
 
             <div class="md-btn-close">
-                <img src="~/images/icons/close_bck.svg" id="close">
+                <img src="../../wwwroot/images/icons/close_bck.svg" id="close">
             </div>
             <h2>Inserir dados</h2>
 
@@ -196,7 +200,7 @@
                         </div>
 
                         <label class="md-file-input" for="file-input">
-                            <img src="~/images/img/uploadImage.svg" />
+                            <img src="../../wwwroot/images/img/uploadImage.svg" />
                         </label>
                         <input id="file-input" type="file" accept="image/*"<!--asp-for="image"-->/>
 
@@ -212,13 +216,47 @@
         </div>
     </div>
 
+    <!-- Modal inserir estratégia -->
+    <div class="me-modal-container" id="me-modal">
+        <div class="me-modal">
+
+            <div class="me-btn-close">
+                <img src="../../wwwroot/images/icons/close_bck.svg" id="close">
+            </div>
+
+            <h2>Inserir estratégia</h2>
+
+            <div class="me-body">
+                <form class="me-form" asp-controller="" asp-action="" method="POST">
+                    <div class="me-inputs">
+                        <input type="text" class="input" placeholder="Nome" asp-for="Nome">
+                        <input type="text" class="input" placeholder="Em qual ativo usa-lá?" <!--asp-for=""--> > 
+                        <input type="text" class="input" placeholder="Onde entra na operação?" <!--asp-for="Onde"--> >
+                        <input type="text" class="input" placeholder="Quando realiza a entrada?" <!--asp-for="Quando"--> >
+                    </div>
+                    <div class="me-inputs">
+                        <input type="text" class="input" placeholder="Como será a entrada?" <!--asp-for="Como"--> >
+                        <input type="text" class="input" placeholder="Por que?" <!--asp-for="Porque"--> >
+
+                        <div class="me-save-btn">
+                            <button type="submit">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Modal config. de perfil -->
     <partial name="_configUser" />
 
     <!-- Scripts -->
-    <script src="~/js/ms-modal.js"></script>
-    <script src="~/js/md-modal.js"></script>
-    <script src="~/js/me-modal.js"></script>
-    <script src="~/js/button-modal.js"></script>
+    <script src="../../wwwroot/js/ms-modal.js"></script>
+    <script src="../../wwwroot/js/md-modal.js"></script>
+    <script src="../../wwwroot/js/me-modal.js"></script>
+    <script src="../../wwwroot/js/button-modal.js"></script>
 </body>
 </html>
