@@ -855,3 +855,8 @@ C:\Users\leona\Documents\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\
 C:\Users\leona\Documents\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.dll
 C:\Users\leona\Documents\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.pdb
 C:\Users\leona\Documents\TCCProject-DataTrade-master\ProjetoDATATrade\obj\Debug\netcoreapp3.1\ProjetoDATATrade.genruntimeconfig.cache
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\DTrade\_TableLayout.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Rentabilidade\_TableLayoutR.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_configUser.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_FooterLayout.cshtml.g.cs
+A:\Documentos\TCC\Project\ProjetoDATATrade\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_HeaderLayout.cshtml.g.cs

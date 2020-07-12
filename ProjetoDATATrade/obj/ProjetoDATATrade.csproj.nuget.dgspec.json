@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {}
+    "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {
+    "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+        "projectUniqueName": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
         "projectName": "ProjetoDATATrade",
-        "projectPath": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
-        "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\Documents\\TCCProject-DataTrade-master\\ProjetoDATATrade\\obj\\",
+        "projectPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\ProjetoDATATrade.csproj",
+        "packagesPath": "C:\\Users\\André\\.nuget\\packages\\",
+        "outputPath": "A:\\Documentos\\TCC\\Project\\ProjetoDATATrade\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\André\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.CodeQuality.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -107,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

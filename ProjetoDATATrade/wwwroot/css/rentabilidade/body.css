@@ -51,8 +51,9 @@
       align-items: center; }
       .container .card .body .main-informations {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 180px));
-        height: 90px;
+        grid-template-columns: repeat(5, 1fr);
+        height: auto;
+        padding: 10px 0;
         align-content: center;
         justify-content: space-evenly;
         background: #E1E1E1;

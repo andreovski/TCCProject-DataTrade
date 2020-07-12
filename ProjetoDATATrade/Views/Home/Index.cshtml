@@ -24,59 +24,8 @@
 
 </head>
 <body>
-
     <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="main-logo">
-                <a href="@Url.Action("Index", "Home")"><img src="~/images/img/main-logo.png" alt="Logo DataTrade"></a>
-            </div>
-
-            <div class="main-info">
-                <div class="info-01">
-                    <label>Rendimento diário</label>
-                    <div id="main-rendimento-header">
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="info-02">
-                    <label>Lucro diário</label>
-                    <div id="main-lucro-header">
-                        <p>R$ 30,00</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-profile">
-                <div class="profile">
-                    <div class="name">
-                        <p>Sr. Leonardo <p class="sec-name"> de Paula</p>
-                    </div>
-                    <div class="wallet">
-                        <div class="wallet-icon">
-                            <img src="~/images/icons/wallet.svg" alt="Carteira">
-                        </div>
-                        <div class="wallet-value">
-                            <p>R$ 0,00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="avatar">
-                    <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt="Avatar">
-                </div>
-            </div>
-        </div>
-
-        <nav>
-            <div class="container-nav">
-                <ul class="grid-nav">
-                    <li class="grid-item"><a href="@Url.Action("Index", "Home")">Minhas Regras</a></li>
-                    <li class="grid-item"><a href="@Url.Action("DTrade", "Home")">Diário de Trade</a></li>
-                    <li class="grid-item last"><a href="@Url.Action("Rentabilidade", "Home")">Rentabilidade</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <partial name="_HeaderLayout" />
 
     <!-- Main -->
     <main class="main container">
@@ -227,29 +176,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="logo-footer">
-                <img src="~/images/img/footer-logo.svg" alt="DATATRADER">
-            </div>
-            <div class="links-footer mapa-do-site">
-                <h3>Mapa do site</h3>
-                <ul>
-                    <li><a href="~/Home/Index">Minhas Regras</a></li>
-                    <li><a href="~/Home/DTrade">Diário de Trader</a></li>
-                    <li><a href="~/Home/Rentabilidade">Rentabilidade</a></li>
-                </ul>
-            </div>
-            <div class="links-footer Suporte">
-                <h3>Suporte</h3>
-                <ul>
-                    <li><a href="#">Fale com a gente</a></li>
-                    <li><a href="#">Feedbacks</a></li>
-                    <li><a href="#">E-mail</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <partial name="_FooterLayout" />
 
     <!-- Botão de inserção de dados -->
     <div class="add-btn">
@@ -260,7 +187,7 @@
         </div>
       </div>
       <button id="add-btn-show" type="button">+</button>
-    </div>-->
+    </div>
     
     <!-- Modal inserir estratégia -->
     <div class="me-modal-container" id="me-modal">
@@ -276,13 +203,13 @@
                 <form class="me-form" asp-controller="" asp-action="" method="POST">
                     <div class="me-inputs">
                         <input type="text" class="input" placeholder="Nome" asp-for="Nome">
-                        <input type="text" class="input" placeholder="Em qual ativo usa-lá?" asp-for="">
-                        <input type="text" class="input" placeholder="Onde entra na operação?" asp-for="Onde">
-                        <input type="text" class="input" placeholder="Quando realiza a entrada?" asp-for="Quando">
+                        <input type="text" class="input" placeholder="Em qual ativo usa-lá?" <!--asp-for=""--> > 
+                        <input type="text" class="input" placeholder="Onde entra na operação?" <!--asp-for="Onde"--> >
+                        <input type="text" class="input" placeholder="Quando realiza a entrada?" <!--asp-for="Quando"--> >
                     </div>
                     <div class="me-inputs">
-                        <input type="text" class="input" placeholder="Como será a entrada?" asp-for="Como">
-                        <input type="text" class="input" placeholder="Por que?" asp-for="Porque">
+                        <input type="text" class="input" placeholder="Como será a entrada?" <!--asp-for="Como"--> >
+                        <input type="text" class="input" placeholder="Por que?" <!--asp-for="Porque"--> >
 
                         <div class="me-save-btn">
                             <button type="submit">
@@ -297,74 +224,7 @@
     </div>
 
     <!-- Modal config. de perfil -->
-    <div class="ms-modal-container" id="modalInitial">
-
-        <div class="ms-modal">
-            <header class="ms-header">
-                <div class="ms-close">
-                    <img src="~/images/icons/close.svg" alt="" id="close">
-                </div>
-
-                <div class="ms-wallet">
-                    <div class="ms-wallet-icon">
-                        <img src="~/images/icons/wallet.svg" alt="Carteira">
-                    </div>
-                    <div class="ms-wallet-value">
-                        R$<input class="inputNone" type="number" step="0.01" min="0" max="10" asp-for="Saldo">
-                    </div>
-                </div>
-            </header>
-
-            <div class="ms-avatar">
-                <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt="Avatar">
-            </div>
-            <div class="ms-name">
-                <p><b>Sr. Leonardo de Paula</b></p> <!--Renderizar o nome da pessoas-->
-            </div>
-
-            <div class="ms-line">
-                <hr>
-            </div>
-
-            <h1>Dados de usuário</h1>
-
-            <form method="POST" asp-action="RecuperarAlterarSenha" asp-controller="Index" class="ms-form">
-
-                <div class="ms-first-settings">
-                    <input class="input" type="text" value="Leonardo" asp-for="NomeCompleto">
-                    <input class="input" type="email" placeholder="leonardo@leonardo.com" disabled>
-                    <div>
-                        <input class="input input-password" type="password" placeholder="Senha atual" asp-for="Senha">
-                        <input class="input input-password" type="password" placeholder="Nova senha" asp-for="SenhaNova">
-                    </div>
-                </div>
-
-                <div class="ms-line">
-                    <hr>
-                </div>
-
-                <h1>Perfil Trader</h1>
-
-                <div class="ms-perfilTrader-settings">
-                    <input class="input" type="text" placeholder="Dias da operação" asp-for="DiasTrader">
-                    <input class="input" type="time" placeholder="Horario de operação" asp-for="HorarioTrader">
-                    <input class="input" type="number" placeholder="Objetivo de ganho diário" asp-for="ObjetivoGanhoDiario">
-                    <input class="input" type="number" placeholder="Objetivo de ganho semanal" asp-for="ObjetivoGanhoSemanal">
-                    <input class="input" type="number" placeholder="Objetivo de ganho mensal" asp-for="ObjetivoGanhoMensal">
-                    <input class="input" type="number" placeholder="Limite de perda diária" asp-for="LimitePerdaDiaria">
-                    <input class="input" type="number" placeholder="Limite de perda semanal" asp-for="LimitePerdaSemanal">
-                    <input class="input" type="number" placeholder="Limite de perda mensal" asp-for="LimitePerdaMensal">
-                    <input class="input" type="text" placeholder="Ativo" asp-for="AtivoOperado">
-                    <input class="input" type="text" placeholder="Indicadores" asp-for="IndicadorTrader">
-                </div>
-
-                <div class="ms-button">
-                    <button type="submit">Salvar</button>
-                </div>
-            </form>
-
-        </div>
-    </div>
+    <partial name="_configUser" />
 
     <!-- Scripts -->
     <script src="~/js/ms-modal.js"></script>

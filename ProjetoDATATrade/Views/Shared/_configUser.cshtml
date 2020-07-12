@@ -1,0 +1,69 @@
+<!-- Modal config. de perfil -->
+<div class="ms-modal-container" id="modalInitial">
+    
+    <div class="ms-modal">
+        <header class="ms-header">
+            <div class="ms-close">
+                <img src="~/images/icons/close.svg" alt="" id="close">
+            </div>
+            
+            <div class="ms-wallet">
+                <div class="ms-wallet-icon">
+                    <img src="~/images/icons/wallet.svg" alt="Carteira">
+                </div>
+                <div class="ms-wallet-value">
+                    R$<input class="inputNone" type="number" step="0.01" min="0" max="10" asp-for="Saldo">
+                </div>
+            </div>
+        </header>
+        
+        <div class="ms-avatar">
+            <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt="Avatar">
+        </div>
+        <div class="ms-name">
+            <p><b>Sr. Leonardo de Paula</b></p> <!--Renderizar o nome da pessoas-->
+        </div>
+        
+        <div class="ms-line">
+            <hr>
+        </div>
+        
+        <h1>Dados de usuário</h1>
+        
+        <form method="POST" asp-action="RecuperarAlterarSenha" asp-controller="Index" class="ms-form">
+            
+            <div class="ms-first-settings">
+                <input class="input" type="text" value="Leonardo" asp-for="NomeCompleto">
+                <input class="input" type="email" placeholder="leonardo@leonardo.com" disabled>
+                <div>
+                    <input class="input input-password" type="password" placeholder="Senha atual" asp-for="Senha">
+                    <input class="input input-password" type="password" placeholder="Nova senha" asp-for="SenhaNova">
+                </div>
+            </div>
+            
+            <div class="ms-line">
+                <hr>
+            </div>
+            
+            <h1>Perfil Trader</h1>
+            
+            <div class="ms-perfilTrader-settings">
+                <input class="input" type="text" placeholder="Dias da operação" asp-for="DiasTrader">
+                <input class="input" type="time" placeholder="Horario de operação" asp-for="HorarioTrader">
+                <input class="input" type="number" placeholder="Objetivo de ganho diário" asp-for="ObjetivoGanhoDiario">
+                <input class="input" type="number" placeholder="Objetivo de ganho semanal" asp-for="ObjetivoGanhoSemanal">
+                <input class="input" type="number" placeholder="Objetivo de ganho mensal" asp-for="ObjetivoGanhoMensal">
+                <input class="input" type="number" placeholder="Limite de perda diária" asp-for="LimitePerdaDiaria">
+                <input class="input" type="number" placeholder="Limite de perda semanal" asp-for="LimitePerdaSemanal">
+                <input class="input" type="number" placeholder="Limite de perda mensal" asp-for="LimitePerdaMensal">
+                <input class="input" type="text" placeholder="Ativo" asp-for="AtivoOperado">
+                <input class="input" type="text" placeholder="Indicadores" asp-for="IndicadorTrader">
+            </div>
+            
+            <div class="ms-button">
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+        
+    </div>
+</div>

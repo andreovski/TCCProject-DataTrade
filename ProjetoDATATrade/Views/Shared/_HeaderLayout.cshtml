@@ -1,0 +1,52 @@
+<header>
+  <div class="header-container">
+    <div class="main-logo">
+      <a href="@Url.Action("Index", "Home")"><img src="~/images/img/main-logo.png" alt="Logo DataTrade"></a>
+    </div>
+    
+    <div class="main-info">
+      <div class="info-01">
+        <label>Rendimento diário</label>
+        <div id="main-rendimento-header">
+          <p>10%</p>
+        </div>
+      </div>
+      <div class="info-02">
+        <label>Lucro diário</label>
+        <div id="main-lucro-header">
+          <p>R$ 30,00</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-profile">
+      <div class="profile">
+        <div class="name">
+          <p>Sr. Leonardo <p class="sec-name"> de Paula</p>
+        </div>
+        <div class="wallet">
+          <div class="wallet-icon">
+            <img src="~/images/icons/wallet.svg" alt="Carteira">
+          </div>
+          <div class="wallet-value">
+            <p>R$ 0,00</p> <!-- puxar o valor da carteira -->
+          </div>
+        </div>
+      </div>
+      <div class="avatar">
+        <img src="https://api.adorable.io/avatars/100/abott@adorable.png" alt="Avatar">
+      </div>
+    </div>
+  </div>
+  
+  <nav>
+    <div class="container-nav">
+      <ul class="grid-nav">
+        <li class="grid-item"><a href="@Url.Action("Index", "Home")">Minhas Regras</a></li>
+        <li class="grid-item"><a href="@Url.Action("DTrade", "Home")">Diário de Trade</a></li>
+        <li class="grid-item last"><a href="@Url.Action("Rentabilidade", "Home")">Rentabilidade</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+    
